@@ -1,0 +1,332 @@
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 1.5em;
+    font-family: "Supermercado One", cursive; /*  
+    that will make fonts 150% larger, if you want smaller fonts on 	mobile use something like .9em for 90% smaller 
+  */
+  }
+
+  @media screen and (min-width: 480px) {
+    #leftsidebar {
+      width: 200px;
+      float: left;
+    }
+    #main {
+      margin-left: 216px;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  div {
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+  /*  
+    add specific classes and id's, section,  
+    article, aside or whatever other tags you may have made columns  
+    with. 
+    You may need to zero out or reduce your margin and padding too. 
+  */
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+
+.nat {
+  margin-left: 100px;
+  margin-top: -90px;
+}
+
+body {
+  background-color: lightblue;
+  max-width: 100%;
+  height: auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.left {
+  position: relative;
+  margin-left: 1250px;
+  margin-top: -1310px;
+  display: inline;
+}
+
+.mal {
+  position: relative;
+  margin-top: 2500px;
+}
+.para {
+  margin-left: 750px;
+  font-size: 20px;
+  left: 530px;
+  color: black;
+  margin-top: 600px;
+}
+
+.dis {
+  display: inline;
+}
+
+footer {
+  position: relative;
+  display: relative;
+  margin-top: 100px;
+}
+
+.red {
+  margin-top: -50px;
+  margin-left: 100px;
+}
+
+.slat {
+  margin-top: -928px;
+  margin-left: 630px;
+  width: 125%;
+  height: 800px;
+}
+
+.sleft {
+  margin-left: 150px;
+}
+
+.cleft {
+  margin-left: 150px;
+}
+
+.robo {
+  margin-left: 100px;
+  margin-top: -50px;
+}
+
+a {
+  color: white;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.img-banner {
+  display: none;
+  background-color: #60747e;
+}
+
+.img-info {
+  width: 100%;
+}
+
+.img-info h2 {
+  padding: 30px 30px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color: #111;
+  line-height: 44px;
+}
+
+.img-info p {
+  padding: 0px 30px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #111;
+  line-height: 24px;
+}
+
+.medi {
+  position: relative;
+  margin-top: -900px;
+}
+
+.img-me {
+  width: 100%;
+  border-radius: 50%;
+  display: inline;
+  display: responsive;
+}
+
+@media only screen and (min-width: 768px) {
+  .img-banner {
+    display: block;
+    width: 100%;
+    padding-bottom: 30px;
+    height: 300px;
+  }
+  .wrapper {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .img-info {
+    width: 100%;
+  }
+  .img-info h2 {
+    padding: 20px 0px 0px;
+  }
+
+  .img-info p {
+    padding: 20px 0px 0px;
+  }
+
+  .img-me {
+    padding-top: 30px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .wrapper {
+    width: 1000px;
+  }
+
+  .img-info {
+    width: 50%;
+    float: right;
+  }
+
+  bg-dark {
+    height: 100px;
+  }
+
+  .card-body {
+    height: 645px;
+  }
+
+  .card-footer {
+    color: #e5e5e5;
+  }
+
+  .soot {
+    color: #e5e5e5;
+  }
+
+  .img-info h2 {
+    padding: 20px 0px 0px 30px;
+  }
+
+  .flat {
+    margin-left: 150px;
+    margin-top: 1500px;
+    width: 125%;
+  }
+
+  .move {
+    margin-top: 55px;
+    color: black;
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 92px;
+  }
+
+  .bless {
+    margin-left: -500px;
+  }
+  .img-info p {
+    padding: 20px 0px 0px 30px;
+  }
+
+  #sla {
+    width: 380px;
+    height: 580px;
+    margin-top: -160px;
+    margin-left: -45px;
+    padding-right: 50px;
+  }
+
+  .cent {
+    margin-left: 200px;
+  }
+
+  .card-footer {
+    color: gray;
+    margin-top: 50px;
+  }
+
+  .img-me {
+    padding-top: 50px;
+    width: 150px;
+    float: left;
+    height: 650px;
+  }
+}
+
+#nav {
+  display: flex;
+  background-color: black;
+}
+
+.dee {
+  margin-left: 50px;
+  background: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.container {
+  margin-top: 10px;
+  margin-left: 120px;
+  height: 100px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
