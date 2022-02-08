@@ -1,6 +1,5 @@
 html,
 body {
-  font-size: 10px;
   color: #dfdfdf;
   background-color: #063647;
   font-family: "Supermercado One", cursive;
@@ -127,9 +126,6 @@ p {
   width: 100%;
   margin: 0 auto;
   position: relative;
-}
-
-img {
 }
 
 .social {
