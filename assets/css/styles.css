@@ -72,8 +72,13 @@ p {
   padding-top: 1rem;
 }
 .slim {
-  width: 600px;
-  height: 500px;
+  width: 100%;
+  height: auto;
+}
+
+.flat {
+  width: 100%;
+  height: auto;
 }
 .social-container img {
   max-width: 100%;
