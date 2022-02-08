@@ -73,7 +73,7 @@ p {
 }
 
 .social-container img {
-  max-width: 100%;
+  min-width: 100%;
   max-height: 175px;
   margin-bottom: 15px;
 }
@@ -81,7 +81,7 @@ p {
 .project-figure {
   margin: 0 auto 0rem auto;
   max-height: 256px;
-  max-width: 256px;
+  min-width: 100%;
 }
 
 .box {
@@ -90,7 +90,7 @@ p {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  min-width: 100%;
 }
 
 /* Track */
@@ -124,18 +124,32 @@ p {
 }
 
 .intro {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
+}
+
+img {
+}
+
+.social {
+  width: 100%;
+  height: auto;
 }
 
 .void-background {
   background-color: transparent;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 100%) {
   .nav-menu {
     background-color: #063647;
+  }
+
+  .social {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
   .nav-left {
@@ -143,12 +157,17 @@ p {
   }
 
   .slim {
+    width: 100%;
+    height: auto;
+  }
+
+  .slat {
     max-width: 100%;
     height: auto;
   }
 
   .flat {
-    max-width: 100%;
+    max-width: 500%;
     height: auto;
   }
 
