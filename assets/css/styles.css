@@ -1,10 +1,10 @@
 html,
 body {
-  font-size: 16px;
+  font-size: 10px;
   color: #dfdfdf;
   background-color: #063647;
   font-family: "Supermercado One", cursive;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 #about {
@@ -84,12 +84,28 @@ p {
   max-width: 256px;
 }
 
-.project-text {
-}
-
 .box {
   background-color: transparent;
   border: 2px solid rgba(7, 59, 79, 0.5);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .title {
@@ -98,9 +114,19 @@ p {
   margin-bottom: 2rem;
 }
 
+.section-1 {
+  margin-top: -120px;
+  position: responsive;
+}
+
+.container {
+  margin-top: 80px;
+}
+
 .intro {
   width: 80%;
   margin: 0 auto;
+  position: relative;
 }
 
 .void-background {
@@ -110,6 +136,10 @@ p {
 @media screen and (max-width: 768px) {
   .nav-menu {
     background-color: #063647;
+  }
+
+  .nav-left {
+    color: none;
   }
 
   .slim {
@@ -124,10 +154,6 @@ p {
 
   .nav-toggle:hover {
     background-color: transparent;
-  }
-
-  .nav-toggle span {
-    background-color: #dfdfdf;
   }
 
   .nav-toggle span:hover {
