@@ -71,15 +71,7 @@ p {
 .intro-description {
   padding-top: 1rem;
 }
-.slim {
-  width: 100%;
-  height: auto;
-}
 
-.flat {
-  width: 100%;
-  height: auto;
-}
 .social-container img {
   max-width: 100%;
   max-height: 175px;
@@ -118,6 +110,16 @@ p {
 @media screen and (max-width: 768px) {
   .nav-menu {
     background-color: #063647;
+  }
+
+  .slim {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .flat {
+    max-width: 100%;
+    height: auto;
   }
 
   .nav-toggle:hover {
