@@ -1,3 +1,8 @@
+* {
+  Display: justify-content;
+  }
+  
+
 html,
 body {
   color: #dfdfdf;
@@ -154,7 +159,12 @@ p {
 
   .slim {
     width: 100%;
-    height: auto;
+    height: 100px;
+  }
+
+  .du{
+    height: 50%;
+    display: justify-content;
   }
 
   .slat {
