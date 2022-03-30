@@ -10,69 +10,15 @@
 	<link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
 	<meta name="author" content="Azfar Bilal">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
-}
-
-/* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-  display: none;
-}
-
-/* Style navigation menu links */
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
-
-/* Style the hamburger menu */
-.topnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-/* Add a grey background color on mouse-over */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Style the active link (or home/logo) */
-.active {
-  background-color: #04AA6D;
-  color: white;
-}
-	</style>
-	<script>
-		function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-	</script>
 </head>
 	<body>
-		<div class="topnav">
 		<!-- Navbar -->
 		<nav class="nav container void-background">
 			<!-- This "nav-menu" is hidden on mobile -->
 			<!-- Add the modifier "is-active" to display it on mobile -->
 			<div>
-				<a href="#home" class="normal"><img src="./jur.png" alt="logo" style="position: relative; top: 5px;" height= "100px" width= "100px;"/></a>
+				<img src="./jur.png" alt="logo" style="position: relative; top: 30px;" height= "100px" width= "100px;"/>
 			</div>
-
 			<div class="nav-left">
 				<a href="https://azfarsaleem.medium.com/" target="_blank" class="nav-item">
 					<span class="icon">
@@ -90,7 +36,10 @@
 					</span>
 				</a>				
 			</div>
-			<div id="myLinks">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
 			<div class="nav-right nav-menu">
 				<a class="nav-item" href="#about">About</a>
 				<a class="nav-item" href="#projects">Projects</a>
@@ -105,12 +54,7 @@
 				<span></span>
 			</span>
 		</nav>
-		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-			<i class="fa fa-bars"></i>
-		  </a>
-			</div>
-		</div>	
-		</div>
+				
 		<!-- About Me -->
 		<section class="section section-1">
 			<div class="container has-text-centered">
@@ -119,7 +63,7 @@
 			</div>
 			<div class="container"></br>
 				<p class="intro" id="about">
-					With 6 years of experience in The Digital Marketing, I have worked with different verticals of the Technology Industry. Working as a Content Writer, Digital Marketing Manager and Technology Content Strategist gave me valuable experiences of attracting customers to interact with products from several companies.
+					With 6 years of experience in Digital Marketing, I have worked with different verticals of the Technology Industry. Working as a Content Writer, Digital Marketing Manager and Technology Content Strategist for different entities gave me valuable experiences of increasing the interaction of customers with products from several companies.
 				</p>
 			</div>
 		</section>
@@ -136,9 +80,9 @@
 					<div class="column">
 						<div class=" project-text">
 							<article>
-								<div>
+								<div class="no">
 									<figure class="flat">
-										<div><a href="https://blog.vidizmo.com/comparing-the-8-best-live-video-streaming-platforms-of-2021"><img class="image" src="images/comp.png" alt="Image"></a></div>
+										<div><a href="https://blog.vidizmo.com/comparing-the-8-best-live-video-streaming-platforms-of-2021"><img style="height: 200px; width: 90%;" class="slim" src="images/comp.png" alt="Image"></a></div>
 									</figure>
 								</div>
 								
@@ -152,11 +96,11 @@
 						<br>
 						<br>
 						</div>
-						<div class=" project-texta">
+						<div class=" project-text">
 							<article>
 								<div>
 									<figure class="du">
-										<div><a href="https://drive.google.com/file/d/1GpgOrIczxSKvmSO2oBJshLKnvkL427cV/view"><img class="image" src="images/white.png" alt="Image"></a></div>
+										<div><a href="https://drive.google.com/file/d/1GpgOrIczxSKvmSO2oBJshLKnvkL427cV/view"><img style="height: 200px;" class="slim" src="images/white.png" alt="Image"></a></div>
 									</figure>
 								</div>
 								
@@ -175,7 +119,7 @@
 							<article>
 								<div>
 									<figure class="">
-										<a href="https://blog.vidizmo.com/5-ways-you-can-use-video-streaming-to-enhance-your-learning-and-development-programs"><img class="image" src="images/vld.png" alt="Image"></a>
+										<a href="https://blog.vidizmo.com/5-ways-you-can-use-video-streaming-to-enhance-your-learning-and-development-programs"><img style="height: 200px; width: 90%;" class="slim" src="images/vld.png" alt="Image"></a>
 									</figure>
 								</div>
 								<div>			
@@ -192,14 +136,12 @@
 							<article>
 								<div>
 									<figure class="slat">
-										<a href="https://blog.vidizmo.com/video-streaming-in-the-learning-and-development-industry-in-2017"><img class="image" src="images/vldi.png" alt="Image"></a>
+										<a href="https://blog.vidizmo.com/video-streaming-in-the-learning-and-development-industry-in-2017"><img style="height: 200px; width: 90%;" class="slim" src="images/vldi.png" alt="Image"></a>
 									</figure>
 								</div>
 								<div>			
 									<p>
-										A detailed guide on how to convince decision makers that video is the present and future of Learning and Development.
-
-										Without an effective training program, a company can be subject to a great number of underlying issues that directly affect employee performance. With ever-growing challenges that have to do with employee engagement, unpredictable turnover and a volatile cultural and learning style among employees; a burgeoning need to overcome these issues has arisen in learning and development (L&D) departments across the board.									</p>
+										A detailed guide on how to convince decision makers that video is the present and future of Learning and Development.</p>
 								</div>
 							</article>					
 						</div>
@@ -216,10 +158,10 @@
 				</div>
 				<div class="social-container columns">
 					<div class="column is-6 has-text-centered">
-						<a target="_blank" href="https://www.linkedin.com/in/azfar-bilal-saleem-ba5242113/"><img class="soca" src="assets/img/linkedin.png"></a>
+						<a target="_blank" href="https://www.linkedin.com/in/azfar-bilal-saleem-ba5242113/"><img class="social" style="height: 150px; width: 150px;" src="assets/img/linkedin.png"></a>
 					</div>
 					<div class="column is-6 has-text-centered">
-						<a target="_blank" href="https://twitter.com/azfar75"><img class="social soca" src="assets/img/twitter.png" ></a>
+						<a target="_blank" href="https://twitter.com/azfar75"><img class="social social-container img" style="height: 150px; width: 150px;" src="assets/img/twitter.png" ></a>
 					</div>
 				</div>
 			</div>
