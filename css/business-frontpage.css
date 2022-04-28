@@ -16,6 +16,12 @@
     }
   }
 
+  .art {
+    height: auto;
+    width: auto;
+    margin-left: -200px;
+  }
+
   img {
     width: 100%;
     height: auto;
@@ -74,6 +80,10 @@
   }
 }
 
+.grow{
+  margin-left: -200px;
+}
+
 .nat {
   margin-left: 100px;
   margin-top: -90px;
@@ -126,8 +136,20 @@ footer {
 .slim{
   width: 200px;
   height: 200px;
+  margin-left: -200px;
 }
 
+.project-text {
+  margin-left: -200px;
+}
+
+.fig{
+  margin-left: -200px;
+}
+
+.flood{
+  margin-left: -300px;
+}
 .slat {
   margin-top: -928px;
   margin-left: 630px;
