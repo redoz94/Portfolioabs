@@ -158,6 +158,7 @@ p {
 
   .slim {
     width: 100%;
+    display: flex; 
   }
 
   .du {
