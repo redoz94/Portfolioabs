@@ -30,6 +30,7 @@ a:hover {
 section {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  position: relative
 }
 
 .section-1 {
@@ -40,8 +41,25 @@ section {
   background-color: #052d3d;
 }
 
+.hub{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  margin-right: 1500px;
+  position: relative;
+}
+
+.net{
+  height: 430px;
+}
+
 .section-3 {
   background-color: #0e282e;
+}
+
+.section-5 {
+  background-color: #063647;
+  padding: 0rem;
 }
 
 .section-4 {
@@ -113,7 +131,7 @@ p {
 
 .title {
   color: #fff;
-  text-align: left;
+  text-align: center;
   margin-bottom: 2rem;
 }
 
@@ -177,6 +195,10 @@ p {
   .slat {
     max-width: 100%;
     height: auto;
+  }
+
+  #certs {
+    background-color: #0D282E;
   }
 
   .flat {
