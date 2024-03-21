@@ -133,6 +133,12 @@ p {
   color: #fff;
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 50px;
+}
+
+.titlo {
+  font-size: 70px;
+
 }
 
 .section-1 {
