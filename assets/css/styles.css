@@ -131,7 +131,12 @@ p {
   color: #fff;
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 50px;
+  font-size: 30px;
+}
+.cross {
+  height: 450px;
+  width: 1200px;
+  position: relative
 }
 
 .titlo {
