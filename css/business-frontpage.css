@@ -139,6 +139,8 @@ footer {
   margin-left: -200px;
 }
 
+
+
 .project-text {
   margin-left: -200px;
 }
@@ -150,6 +152,10 @@ footer {
 .flood{
   margin-left: -300px;
 }
+
+#search {
+  margin-top: 200px;
+}
 .slat {
   margin-top: -928px;
   margin-left: 630px;
@@ -159,6 +165,10 @@ footer {
 
 .sleft {
   margin-left: 150px;
+}
+
+.net{
+  margin-top: 900px
 }
 
 .cleft {
