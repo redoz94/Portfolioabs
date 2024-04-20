@@ -9,3 +9,10 @@ window.onload = () => {
   hamburger.addEventListener('click', () => toggle(navMenu, 'is-active'));
   Array.from(navItems).forEach(e => e.addEventListener('click', toggleNav));
 }
+
+function enlargeImg() {
+  // Set image size to 1.5 times original
+  img.style.transform = "scale(1.5)";
+  // Animation effect
+  img.style.transition = "transform 0.25s ease";
+}

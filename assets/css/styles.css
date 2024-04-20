@@ -86,6 +86,7 @@ a.nav-item {
 .dropdown {
   float: left;
   overflow: hidden;
+  font-size: 20px;
 }
 
 .dropdown .dropbtn {
@@ -196,7 +197,7 @@ p {
   color: #fff;
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 30px;
+  font-size: 20px;
 }
 .cross {
   height: 450px;
