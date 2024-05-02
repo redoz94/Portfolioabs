@@ -110,6 +110,8 @@ a.nav-item {
   z-index: 1;
 }
 
+
+
 .dropdown-content a {
   float: none;
   color: black;
@@ -225,10 +227,7 @@ p {
   position: relative;
 }
 
-.social {
-  width: 100%;
-  height: auto;
-}
+
 
 .void-background {
   background-color: transparent;
