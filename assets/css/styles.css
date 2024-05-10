@@ -82,6 +82,15 @@ a.nav-item {
   padding: 14px 16px;
   text-decoration: none;
 }
+.boss{
+  margin-top: 45px;
+}
+.lo{
+  margin-top: 10px;
+}
+.project-texto {
+  margin-top: 5px;
+}
 
 .dropdown {
   float: left;
