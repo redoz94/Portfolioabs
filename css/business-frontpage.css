@@ -5,6 +5,15 @@
     that will make fonts 150% larger, if you want smaller fonts on 	mobile use something like .9em for 90% smaller 
   */
   }
+  .project-text {
+    margin: 10px; /* Adjust as needed */
+    display: inline-block; /* Ensure they align properly */
+}
+
+.slim {
+    width: 100%; /* Maintain the same width */
+    height: auto; /* Keep the aspect ratio */
+}
 
   @media screen and (min-width: 480px) {
     #leftsidebar {
@@ -134,13 +143,16 @@ footer {
 }
 
 .slim{
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   margin-left: -200px;
 }
 
 
-
+a {
+  overflow: auto;
+  white-space: nowrap;
+}
 .project-text {
   margin-left: -200px;
   display: inline-block}
