@@ -57,6 +57,9 @@ a.nav-item:hover {
 	margin-bottom:15px;
 }
 
+.compa{
+	max-width: 500px;
+}
 .project-figure {
 	margin: 0 auto 1rem auto;
 	max-height: 350px;
@@ -73,9 +76,12 @@ a.nav-item:hover {
 	padding: -20px;
 }
 
+
 .box {
 	background-color: transparent;
 	border: 2px solid rgba(7, 59, 79, 0.5);
+	height: 350px;
+	width: 300;
 }
 
 .title {
@@ -104,7 +110,7 @@ a.nav-item:hover {
 	.nav-menu {
 		background-color: #063647;
 	}
-
+	
 	.center {
 		margin: auto;
 		width: 50%;
@@ -123,7 +129,10 @@ a.nav-item:hover {
 	.nav-toggle span:hover {
 		background-color: #fff;
 	}
-
+	.projimg {
+		height: "350px"; 
+		width: "50000px"
+	  }
 }
 
 
@@ -162,6 +171,10 @@ a.nav-item:hover {
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
+  }
+  .projimg {
+	height: "350px"; 
+	width: "50000px"
   }
   
   /* Change color of dropdown links on hover */
