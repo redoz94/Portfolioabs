@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- SEO: https://app.hubspot.com/academy/achievements/chkr0767/en/1/azfar-saleem/seo
+	Content Marketing Certification: https://app.hubspot.com/academy/achievements/nv38c1fy/en/1/azfar-saleem/content-marketing  
+	Responsive Web Developer Certification: -->
 	<title>Portfolio</title>
 	<!-- css files -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-
+	<link rel="stylesheet" type="text/css" href="./styles.css">
 	<link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
 	<meta name="author" content="Hassan Ali">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +39,16 @@
 
 			<div class="nav-right nav-menu">
 				<a class="nav-item" href="#about">About</a>
-				<a class="nav-item" href="#projects">Projects</a>
+				<div class="dropdown">
+					<button class="dropbtn">Projects
+					</button>
+					<div class="dropdown-content">
+					  <a href="#vid">Video and Image Technology</a>
+					  <a href="#ant">Anthropology</a>
+					  <a href="#fin">Fintech</a>
+					</div>
+				  </div>	
+				</div>				<a class="nav-item" href="#quals">Qualifications</a>
 				<a class="nav-item" href="#social">Social</a>
 			</div>
 
@@ -54,11 +65,11 @@
 		<section id="about" class="section section-1">
 			<div class="container has-text-centered">
 				<!-- Source: https://flic.kr/p/pAZBNK -->
-				<img class="avatar" src="assets/img/oz.png">
+				<img class="avatar" src="assets/img/oz.png" style="width: 330px; height: 230px">
 			</div>
 			<div class="container"></br>
 				<p class="intro">
-					Knowledge is the Key to Success. Let me help your Digital Presence achieve Triumphant Heights by offering your Readers with Vast Information. Using My Refined Writing published on your outfit's website, I will boost your online progress. When you believe in My Certified SEO-writing and Certified Content Marketing Expertise, You will Prosper. Feel free to read my past Long-Form including Short-Form articles below.
+					Knowledge is the Key to Success. Allow me to help you achieve triumph in your digital presence by offering your readers vast information. Publishing my Refined Writing on your Website will Boost your Online Progress. When you believe in My Certified SEO-writing and Certified Content Marketing Expertise, You will Prosper. Feel free to read my past Long-Form Content including Short-Form articles below. Select from Listicles, Technical Writing, Blogging, Academic Material, and Whitepapers.
 				</p>
 			</div>
 		</section>
@@ -67,14 +78,17 @@
 		<section  id="projects" class="section section-2">
 			<div class="container">
 				<div class="has-text-centered">
-					<h3 class="title is-3 col text-center">Projects</h3>
+					<h3 class="title is-3 col text-center" id="vid">Projects</h3>
+				</div>
+				<div class="">
+					<h3 class="title is-3 col text-center" id="vid">Video and Image Technology</h3>
 				</div>
 				
 				<div class="columns is-multiline is-desktop">
 					<!-- Project 1 -->
 					<div class="column">
 						<div class="box project-text">
-							<article>
+							<article >
 								<div>
 									<figure class="image project-figure">
 										<a href="./VIDIZMO Listicle.pdf"><img src="assets/img/comp.png" alt="Image" class="compa" target="_blank"></a>
@@ -82,12 +96,13 @@
 								</div>
 								<div>			
 									<p>
-										They don’t want us to eat. I told you all this before, when you have a swimming pool, do not use chlorine, use salt water, the healing, salt water is the healing.
+										Working with The World's Greatest Video Content Management System, I was assigned to write a Blog that extensively details the functionalities of Top Video Video Streaming Platforms.
 									</p>
 								</div>
 							</article>
 						</div>
 					</div>
+					
 					<!-- Project 2 -->
 					<div class="column">
 						<div class="box project-text">
@@ -99,7 +114,45 @@
 								</div>
 								<div>			
 									<p>
-										Bless up. Another one. How’s business? Boomin. Don’t ever play yourself. Life is what you make it, so let’s make it.
+										<!-- Bless up. Another one. How’s business? Boomin. Don’t ever play yourself. Life is what you make it, so let’s make it. -->
+										Employee Training using Video Content is incredibly efficient. In this blog, I described the various Use Cases and Advantages of Video Content.
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+				<div class="columns is-multiline is-desktop">
+					<!-- Project 1 -->
+					<div class="column">
+						<div class="box project-text">
+							<article >
+								<div>
+									<figure class="image project-figure">
+										<a href="./VIDIZMO Whitepaper.pdf" target="_blank"><img src="assets/img/white.png" alt="Image" class="compa" class="compa"></a>
+									</figure>
+								</div>
+								<div>			
+									<p>
+										Clicking on the image above, you can find my polished Long-Form writing detailing how Learning and Development Professionals can yield numerous advantages with Video.
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+					
+					<!-- Project 2 -->
+					<div class="column">
+						<div class="box project-text">
+							<article>
+								<div>
+									<figure class="image project-figure">
+										<a href="https://blog.vidizmo.com/video-streaming-in-the-learning-and-development-industry-in-2017" target="_blank"><img src="assets/img/learn.png" alt="Image" class="compa" style="padding-top: 3px; height: 153px"></a>
+									</figure>
+								</div>
+								<div>			
+									<p>
+										Take a look at my post on how Video Streaming effectively fostered the efforts of Learning and Development Professionals in 2017.
 									</p>
 								</div>
 							</article>
@@ -116,12 +169,12 @@
 							<article>
 								<div>
 									<figure class="image project-figure">
-										<a href="./VIDIZMO Whitepaper.pdf" target="_blank"><img src="assets/img/white.png" alt="Image" class="compa" width="200" height="200"></a>
+										<a href="./edu.pdf" target="_blank"><img src="assets/img/vect.png" alt="Image" class="compa" class="compa"></a>
 									</figure>
 								</div>
 								<div>			
 									<p>
-										They don’t want us to eat. I told you all this before, when you have a swimming pool, do not use chlorine, use salt water, the healing, salt water is the healing.
+										 My original writing explains how Video is an effective solution to generate several benefits corresponding with Employee Training and Development.
 									</p>
 								</div>
 							</article>
@@ -133,14 +186,13 @@
 							<article>
 								<div>
 									<figure class="image project-figure">
-										<a href="./Website Content On Vidizmo Website.pdf" target="_blank"><img src="assets/img/vect.png" alt="Image" height="20px;" class="compa"></a>
+										<a href="./Website Content On Vidizmo Website.pdf" target="_blank"><img src="assets/img/vect.png" alt="Image" class="compa"></a>
 									</figure>
 								</div>
 								<div>			
 									<p>
-										Bless up. Another one. How’s business? Boomin. Don’t ever play yourself. Life is what you make it, so let’s make it.
-									</p>
-								</div>
+										Previously,  I wrote content for VIDIZMO's Website. It shows how The Video Content Management System efficiently helps organizations. 									</p>
+									</div>
 							</article>
 						</div>
 					</div>
@@ -161,7 +213,7 @@
 								</div>
 								<div>			
 									<p>
-										They don’t want us to eat. I told you all this before, when you have a swimming pool, do not use chlorine, use salt water, the healing, salt water is the healing.
+										One of my Upwork Clients retained me as a SEO-Content Writer to create an explanatory blog concerning the Top Online Image-Editing Software. The piece also contains instructions on How-To use the Capcut Image Editing Software. 
 									</p>
 								</div>
 							</article>
@@ -178,7 +230,8 @@
 								</div>
 								<div>			
 									<p>
-										Bless up. Another one. How’s business? Boomin. Don’t ever play yourself. Life is what you make it, so let’s make it.
+										The organization this article's for assigned me a blog comparing Top 5  Commercial Video Production
+Companies. Impressed with my efforts, Startmotion Media has made me an Official Partner. A writer who can publish work that promotes their selection of companies.
 									</p>
 								</div>
 							</article>
@@ -186,6 +239,264 @@
 					</div>
 				</div>
 			</div>
+		</section>
+
+		<section  id="projects" class="section section-2">
+			<div class="container">
+				<div class="">
+					<h3 class="title is-3 col text-center" id="ant">Anthropology</h3>
+				</div>
+				
+				<div class="columns is-multiline is-desktop">
+					<!-- Project 1 -->
+					<div class="column">
+						<div class="box project-text">
+							<article >
+								<div>
+									<figure class="image project-figure">
+										<a href="https://azfarsaleem.medium.com/how-the-media-misrepresents-gendered-violence-58cd687deadb"><img src="assets/img/how.png" alt="Image" class="compa" target="_blank"></a>
+									</figure>
+								</div>
+								<div>			
+									<p>
+										This academic report outlines how The Media underplays the intensity of Gendered Violence. Read about different related instances identified by scholars. 
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+					
+					<!-- Project 2 -->
+					<div class="column">
+						<div class="box project-text">
+							<article>
+								<div>
+									<figure class="image project-figure">
+										<a href="https://azfarsaleem.medium.com/how-new-media-technologies-are-shaping-transnational-activism-and-political-protest-in-recent-years-adc2108f1cc9" target="_blank"><img src="assets/img/trans.png" alt="Image" class="compa"></a>
+									</figure>
+								</div>
+								<div>			
+									<p>
+										New Media Technologies have played a significant role in sparking worldwide protests. This blog demonstrates the importance of the internet in provoking demonstrations that went as far as toppling governments.
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+				<div class="columns is-multiline is-desktop">
+					<!-- Project 1 -->
+					<div class="column">
+						<div class="box project-text">
+							<article >
+								<div>
+									<figure class="image project-figure">
+										<a href="https://azfarsaleem.medium.com/spike-lees-powerful-intimation-of-racial-discrimination-do-the-right-thing-b45aeaa89ac3" target="_blank"><img src="assets/img/the.png" alt="Image" class="compa" class="compa"></a>
+									</figure>
+								</div>
+								<div>			
+									<p>
+										The corresponding Film is a masterpiece directed by Renowned Filmmaker: Spike Lee. The movie displays how marginalized groups of society proceed with their daly lives. The related article comments on the subject.
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+					
+					<!-- Project 2 -->
+					<div class="column">
+						<div class="box project-text">
+							<article>
+								<div>
+									<figure class="image project-figure">
+										<a href="https://azfarsaleem.medium.com/thematically-focusing-on-issues-of-race-in-cinema-ea8c4fb0c520" target="_blank"><img src="assets/img/mal.png" alt="Image" class="compa" style="padding-top: 3px; height: 153px"></a>
+									</figure>
+								</div>
+								<div>			
+									<p>
+										Malcolm X was among incredibly prolific racial activists. Denzel Washington plays the advocate. Delivering powerful speeches as the icon. This article accounts for The New Cultural Politics of Difference. The issues of race and racism as central themes selected by various filmmakers. 
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div><div class="container">
+				
+				
+				<div class="columns is-multiline is-desktop">
+					<!-- Project 1 -->
+					</div>
+					<!-- Project 2 -->
+					<div class="column">
+						<div class="box project-text">
+							<article>
+								<div>
+									<figure class="image project-figure">
+										<a href="https://azfarsaleem.medium.com/discussing-michel-foucaults-concept-of-power-in-relation-to-race-b7d09f33cad5" target="_blank"><img src="assets/img/mic.png" alt="Image" class="compa" style="padding-top: 3px; height: 153px"></a>
+									</figure>
+									<div>			
+										<p >
+											Michel Foucault’s idea of power can be applied to the concept of race in terms of the various societal discourses that have circulated throughout western society. His conception of racism as inherently a form of bio-political government is the first of its kind, and deserves appreciation because of its high authenticity.
+
+										</p>
+									</div>
+								</div>
+				</div>
+			</div>
+		</section>
+		<section  id="projects" class="section section-2">
+			<div class="container">
+				<div class="">
+					<h3 class="title is-3 col text-center" id="fin">Fintech</h3>
+				</div>
+				
+				<div class="columns is-multiline is-desktop">
+					<!-- Project 1 -->
+					<div class="column">
+						<div class="box project-text">
+							<article >
+								<div>
+									<figure class="image project-figure">
+										<a href="https://tecstik.com/TecStik-Blog/Revealing-Pakistan's-Financial-Structure" target="_blank"><img src="assets/img/rev.png" alt="Image" class="compa" target="_blank" style="padding-top: 3px; height: 153px"></a>
+									</figure>
+								</div>
+								<div>			
+									<p>
+										Explore Pakistan’s financial landscape to gain detailed insights into the country's financial operations - simultaneously boosting your income. Strengthen the country’s collective citizen knowledge by studying and investing time to learn about its financial network. Facilitating persistent economic development on a national level.
+
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+					
+					<!-- Project 2 -->
+					<div class="column">
+						<div class="box project-text">
+							<article>
+								<div>
+									<figure class="image project-figure">
+										<a href="https://tecstik.com/TecStik-Blog/Unleashing-the-Power-of-TecStik%E2%80%99s-Cutting-Edge-Solutions" target="_blank"><img src="assets/img/revo.png" alt="Image" class="compa"></a>
+									</figure>
+								</div>
+								<div>			
+									<p>
+										Fintech has played a huge role in broadening the reach of financial services - empowering citizens to take control of their finances with ease and affordability. Discover how TecStik's Fintech is structured to boost the financial positions of the public.
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+					
+				</div>
+				<div class="has-text-centered">
+					<h3 class="title is-3 col text-center" id="quals">Qualifications</h3>
+				</div><div class="columns is-multiline is-desktop">
+					<!-- Project 1 -->
+					<div class="column">
+						<div class="box project-text">
+							<article >
+								<div>
+									<figure class="image project-figure">
+										<a href="https://app.hubspot.com/academy/achievements/nv38c1fy/en/1/azfar-saleem/content-marketing" target="_blank"><img src="assets/img/Hubspot.png" alt="Image" class="compa"></a>
+									</figure>
+								</div>
+								<div>			
+									<div>			
+										<p class=" has-text-centered">
+											Hubspot Content Marketing Expert
+										</p>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+					
+					<!-- Project 2 -->
+					<div class="column">
+						<div class="box project-text">
+							<article>
+								<div>
+									<figure class="image project-figure">
+										<a href="https://app.hubspot.com/academy/achievements/chkr0767/en/1/azfar-saleem/seo" target="_blank"><img src="assets/img/SEOCertification.png" alt="Image" class="compa"></a>
+									</figure>
+								</div>
+								<div>			
+									<p class=" has-text-centered">
+										Hubspot SEO Certified
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+					
+				</div>
+				<div class="columns is-multiline is-desktop">
+					<!-- Project 1 -->
+					<div class="column">
+						<div class="box project-text">
+							<article >
+								<div>
+									<figure class="image project-figure">
+										<a href="https://app.hubspot.com/academy/achievements/nv38c1fy/en/1/azfar-saleem/content-marketing" target="_blank"><img src="assets/img/aff.png" alt="Image" class="compa"></a>
+									</figure>
+								</div>
+								<div>			
+									<div>			
+										<h5 class=" has-text-centered">
+											Digiskills Affiliate Marketer
+										</h5>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+					
+					<!-- Project 2 -->
+					<div class="column">
+						<div class="box project-text">
+							<article>
+								<div>
+									<figure class="image project-figure">
+										<a href="https://app.hubspot.com/academy/achievements/chkr0767/en/1/azfar-saleem/seo" target="_blank"><img src="assets/img/word.png" alt="Image" class="compa"></a>
+									</figure>
+								</div>
+								<div>			
+									<div>			
+										<h5 class=" has-text-centered">
+											Digiskills Wordpress Developer
+										</h5>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+					
+				</div>
+				<div class="columns is-multiline is-desktop">
+					<!-- Project 1 -->
+					<div class="column">
+						<div class="box project-text">
+							<article >
+								<div>
+									<figure class="image project-figure">
+										<a href="https://www.freecodecamp.org/certification/AzfarSaleem/responsive-web-design" target="_blank"><img src="assets/img/fcc.png" alt="Image" class="compa"></a>
+									</figure>
+								</div>
+								<div>			
+									<div>			
+										<h5 class=" has-text-centered">
+											FreeCodeCamp Responsive Web Developer
+										</h5>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+
+			</div>
+			
 		</section>
 
 		<!-- Social -->

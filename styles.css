@@ -1,0 +1,199 @@
+html, body{
+	font-size:16px;
+	color: #dfdfdf;
+	background-color: #063647; 
+}
+
+a {
+  color: #00d1b2;
+}
+
+a:hover {
+  color: #00d1b2;
+}
+
+section{
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.section-1 {
+	background: #063647;
+}
+
+.section-2 {
+	background-color: #052D3D;
+}
+
+.section-3 {
+	background-color: #0E282E;
+}
+
+.section-4 {
+	background-color: #063647;
+	padding: 0.2rem;
+}
+
+a.nav-item {
+	color: #dfdfdf;
+}
+
+a.nav-item:hover {
+	color: #fff;
+}
+
+.avatar{
+	height:200px;
+	border-radius: 50%;
+}
+
+.intro-description{
+	padding-top: 1rem;
+}
+
+.social-container img{
+	max-width:100%;
+	max-height:575px;
+	margin-bottom:15px;
+}
+
+
+.project-figure {
+	margin: 0 auto 1rem auto;
+	max-height: 350px;
+	max-width: 350px;
+}
+
+
+
+.project-text {
+	text-align: justify;
+}
+
+.box project-text {
+	padding: -20px;
+}
+
+.compa {
+	width:8in;
+	height:11.5in;
+}
+
+.has-text-centered {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+	background-color: transparent;
+	border: 2px solid rgba(7, 59, 79, 0.5);
+	height: 350px;
+	width: 300;
+}
+
+.title {
+	color: #fff;
+	text-align: left;
+	margin-bottom: 2rem;
+}
+
+.intro {
+	text-align: justify;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.void-background {
+	background-color: transparent; 
+}
+
+.center {
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+	padding-left: 10%
+  }
+  .compa {
+	width: 4000px;
+	height: 1000px;
+  }
+ 
+@media screen and (max-width: 768px) {
+	.nav-menu {
+		background-color: #063647;
+	}
+	.compa {
+		width: 1000px;
+		height: 1000px;
+	  }
+	.center {
+		margin: auto;
+		width: 50%;
+		border: 3px solid green;
+		padding: 10px;
+	  }
+
+	.nav-toggle:hover {
+		background-color: transparent;
+	}
+
+	.nav-toggle span {
+		background-color: #dfdfdf;
+	}
+
+	.nav-toggle span:hover {
+		background-color: #fff;
+	}
+	
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+	padding: 25px;
+	font-size: 16px;
+	border: none;
+	background-color: #053647;
+	color: white
+  }
+  .center-image {
+	display: block;
+	margin: 0 auto;
+  }  
+
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+	position: relative;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  .projimg {
+	height: "350px"; 
+	width: "50000px"
+  }
+  
+  /* Change color of dropdown links on hover */
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
