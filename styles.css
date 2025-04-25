@@ -4,6 +4,8 @@ html, body{
 	background-color: #063647; 
 }
 
+
+
 a {
   color: #00d1b2;
 }
@@ -93,7 +95,7 @@ a.nav-item:hover {
 }
 
 .title {
-	color: #fff;
+	color: white;
 	text-align: left;
 	margin-bottom: 2rem;
 }
@@ -121,33 +123,60 @@ a.nav-item:hover {
  
 @media screen and (max-width: 768px) {
 	.nav-menu {
-		background-color: #063647;
-		
-	}
-	.compa {
-		width: 1000px;
-		height: 1000px;
-	  }
-	.center {
-		margin: auto;
-		width: 50%;
-		border: 3px solid green;
+		display: none;
+		flex-direction: column;
+		background-color: #f9f9f9;
+		position: absolute;
+		top: 50px;
+		left: 0;
+		width: 100%;
+		box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 		padding: 10px;
-	  }
-
-	.nav-toggle:hover {
-		background-color: transparent;
+		border-radius: 5px;
 	}
-
-	.nav-toggle span {
-		background-color: #dfdfdf;
-	}
-
-	.nav-toggle span:hover {
-		background-color: #fff;
+	.nav-menu.is-active .nav-item,
+	.nav-menu.is-active .dropdown-content a,
+	.nav-menu.is-active .dropbtn {
+	  color: black;
+			display: flex;
 	}
 	
+.dropdown{
+	background-color: white;
 }
+	
+	.nav-toggle {
+		display: flex;
+		color: white
+	}
+	.nav-item {
+		padding: 12px 15px;
+		border-bottom: 1px solid #ddd;
+		color: black;
+	}
+	 .dropdown-content {
+		position: relative;
+		box-shadow: none;
+		width: auto;
+		padding: 0;
+	}
+	.dropdown:hover .dropdown-content {
+		display: none;
+	}
+	.dropdown-content a{
+		 padding: 8px 10px;
+		 background-color: white;
+	}
+	.nav-toggle span {
+		background-color: #fff;
+	  }
+	  .nav-menu.is-active .dropbtn {
+		background-color: #ddd;
+	}
+	
+	
+}
+
 
 
 /* Dropdown Button */
@@ -198,3 +227,4 @@ a.nav-item:hover {
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
