@@ -123,17 +123,20 @@ a.nav-item:hover {
  
 @media screen and (max-width: 768px) {
 	.nav-menu {
-		display: flex;
+		display: none;
 		flex-direction: column;
 		background-color: #f9f9f9;
 		position: absolute;
-		color: black;
 		top: 50px;
 		left: 0;
 		width: 100%;
 		box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 		padding: 10px;
 		border-radius: 5px;
+	}
+
+	.nav-menu.is-active {
+		display: flex;
 	}
 	.nav-menu.is-active .nav-item,
 	.nav-menu.is-active .dropdown-content a,

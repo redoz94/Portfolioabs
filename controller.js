@@ -13,11 +13,11 @@ window.onload = () => {
   Array.from(navItems).forEach(e => e.addEventListener('click', toggleNav));
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  const navToggle = document.querySelector('.nav-toggle');
+document.addEventListener('DOMContentLoaded', () => {
+  const navToggle = document.getElementById('nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
 
-  navToggle.addEventListener('click', function() {
+  navToggle.addEventListener('click', () => {
       navMenu.classList.toggle('is-active');
   });
 });
