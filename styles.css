@@ -123,10 +123,11 @@ a.nav-item:hover {
  
 @media screen and (max-width: 768px) {
 	.nav-menu {
-		display: none;
+		display: flex;
 		flex-direction: column;
 		background-color: #f9f9f9;
 		position: absolute;
+		color: black;
 		top: 50px;
 		left: 0;
 		width: 100%;
@@ -174,7 +175,9 @@ a.nav-item:hover {
 		background-color: #ddd;
 	}
 	
-	
+	.nav-menu a {
+		color: #000;
+	  }
 }
 
 
