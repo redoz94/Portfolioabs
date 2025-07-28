@@ -77,8 +77,8 @@ a.nav-item:hover {
 }
 
 .compa {
-	width:8in;
-	height:11.5in;
+	width:5px;
+	height:5px;
 }
 
 .has-text-centered {
@@ -117,8 +117,8 @@ a.nav-item:hover {
 	padding-left: 10%
   }
   .compa {
-	width: 4000px;
-	height: 1000px;
+	width: 100px;
+	height: 100px;
   }
  
 @media screen and (max-width: 768px) {
