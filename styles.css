@@ -5,7 +5,9 @@ html, body{
 }
 
 
-
+img {
+	margin-top: 25px;
+}
 a {
   color: #00d1b2;
 }
@@ -90,7 +92,7 @@ a.nav-item:hover {
 .box {
 	background-color: transparent;
 	border: 2px solid rgba(7, 59, 79, 0.5);
-	height: 350px;
+	height: 450px;
 	width: 300;
 }
 
@@ -147,11 +149,14 @@ a.nav-item:hover {
 	
 .dropdown{
 	background-color: white;
+	cursor: pointer;
 }
 	
 	.nav-toggle {
 		display: flex;
-		color: white
+		color: white;
+			cursor: pointer;
+
 	}
 	.nav-item {
 		padding: 12px 15px;
