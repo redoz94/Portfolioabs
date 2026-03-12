@@ -52,7 +52,7 @@ a.nav-item:hover {
 }
 
 .intro-description{
-	padding-top: 1rem;
+	padding-top: -1rem;
 }
 
 .social-container img{
