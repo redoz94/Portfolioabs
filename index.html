@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Azfar Bilal - Portfolio</title>
+    <title>Azfar Bilal | B2B SaaS & Fintech Content Writer</title>
 
     <link
       rel="stylesheet"
@@ -11,24 +11,554 @@
     <link rel="stylesheet" type="text/css" href="./styles.css" />
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
 
-    <meta name="author" content="Hassan Ali" />
+    <meta name="author" content="Azfar Bilal" />
+    <meta
+      name="description"
+      content="B2B SaaS and fintech content writer helping technology brands turn complex products into clear, compelling, search-optimized content."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="Azfar Bilal | B2B SaaS & Fintech Content Writer" />
+    <meta
+      property="og:description"
+      content="SEO blogs, whitepapers, product-led content, and thought leadership for SaaS, fintech, and technology companies."
+    />
+    <meta property="og:type" content="website" />
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+
+    <!-- Portfolio rebuild styles.
+         Keep your existing styles.css, but these rules modernise the page without changing your assets. -->
+    <style>
+      :root {
+        --portfolio-bg: #f7f9fc;
+        --portfolio-dark: #111827;
+        --portfolio-text: #374151;
+        --portfolio-muted: #6b7280;
+        --portfolio-card: #ffffff;
+        --portfolio-border: #e5e7eb;
+        --portfolio-accent: #2563eb;
+        --portfolio-accent-dark: #1d4ed8;
+        --portfolio-soft: #eef4ff;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--portfolio-bg);
+        color: var(--portfolio-text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.65;
+      }
+
+      a {
+        color: var(--portfolio-accent);
+      }
+
+      .nav {
+        margin-top: 18px;
+        padding: 10px 18px;
+        border: 1px solid var(--portfolio-border);
+        background: rgba(255, 255, 255, 0.96);
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      }
+
+      .nav a,
+      .dropbtn {
+        color: var(--portfolio-dark);
+        font-weight: 600;
+      }
+
+      .dropbtn {
+        background: transparent;
+        border: 0;
+        padding: 10px 12px;
+      }
+
+      .dropdown-content {
+        border: 1px solid var(--portfolio-border);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+      }
+
+      .dropdown-content a {
+        color: var(--portfolio-dark);
+      }
+
+      .section {
+        padding: 4rem 1.5rem;
+      }
+
+      .section-heading {
+        margin-bottom: 2rem;
+      }
+
+      .eyebrow {
+        color: var(--portfolio-accent);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+      }
+
+      .portfolio-title {
+        color: var(--portfolio-dark);
+        font-size: clamp(2.3rem, 6vw, 4.8rem);
+        font-weight: 900;
+        line-height: 1.02;
+        letter-spacing: -0.06em;
+        margin-bottom: 1rem;
+      }
+
+      .portfolio-subtitle {
+        color: var(--portfolio-text);
+        font-size: clamp(1.05rem, 2vw, 1.35rem);
+        max-width: 830px;
+        margin: 0 auto 1.75rem;
+      }
+
+      .hero-section {
+        padding-top: 4.5rem;
+        padding-bottom: 3.5rem;
+        background:
+          radial-gradient(circle at top left, rgba(37, 99, 235, 0.13), transparent 38%),
+          radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.1), transparent 34%),
+          var(--portfolio-bg);
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .hero-copy {
+        text-align: left;
+      }
+
+      .hero-copy .portfolio-subtitle {
+        margin-left: 0;
+      }
+
+      .avatar-card {
+        background: var(--portfolio-card);
+        border: 1px solid var(--portfolio-border);
+        border-radius: 28px;
+        padding: 1.25rem;
+        box-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
+      }
+
+      .avatar {
+        width: 100%;
+        max-width: 360px;
+        height: auto !important;
+        border-radius: 24px;
+        display: block;
+        margin: 0 auto;
+        object-fit: cover;
+      }
+
+      .hero-badges,
+      .proof-bar,
+      .tool-list,
+      .tag-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .hero-badges {
+        margin: 1.5rem 0;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.55rem 0.8rem;
+        background: var(--portfolio-card);
+        border: 1px solid var(--portfolio-border);
+        border-radius: 999px;
+        color: var(--portfolio-dark);
+        font-size: 0.92rem;
+        font-weight: 700;
+      }
+
+      .proof-bar {
+        margin-top: 1.5rem;
+      }
+
+      .proof-item {
+        background: var(--portfolio-card);
+        border: 1px solid var(--portfolio-border);
+        border-radius: 18px;
+        padding: 1rem;
+        min-width: 155px;
+        flex: 1;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      }
+
+      .proof-item strong {
+        display: block;
+        color: var(--portfolio-dark);
+        font-size: 1.4rem;
+        line-height: 1.1;
+      }
+
+      .proof-item span {
+        color: var(--portfolio-muted);
+        font-size: 0.9rem;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+        margin-top: 1.5rem;
+      }
+
+      .portfolio-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        border-radius: 999px;
+        padding: 0.85rem 1.15rem;
+        font-weight: 800;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .portfolio-button:hover {
+        transform: translateY(-2px);
+      }
+
+      .button-primary {
+        background: var(--portfolio-accent);
+        color: #ffffff;
+        box-shadow: 0 14px 30px rgba(37, 99, 235, 0.28);
+      }
+
+      .button-primary:hover {
+        color: #ffffff;
+        background: var(--portfolio-accent-dark);
+      }
+
+      .button-secondary {
+        background: #ffffff;
+        color: var(--portfolio-dark);
+        border: 1px solid var(--portfolio-border);
+      }
+
+      .section-title {
+        color: var(--portfolio-dark);
+        font-size: clamp(1.9rem, 4vw, 3rem);
+        font-weight: 900;
+        letter-spacing: -0.04em;
+        margin-bottom: 0.75rem;
+      }
+
+      .section-intro {
+        color: var(--portfolio-muted);
+        max-width: 760px;
+        margin: 0 auto;
+        font-size: 1.05rem;
+      }
+
+      .grid-2,
+      .grid-3,
+      .grid-4 {
+        display: grid;
+        gap: 1.25rem;
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .portfolio-card,
+      .case-card,
+      .service-card,
+      .sample-card,
+      .qualification-card {
+        background: var(--portfolio-card);
+        border: 1px solid var(--portfolio-border);
+        border-radius: 24px;
+        box-shadow: 0 16px 42px rgba(15, 23, 42, 0.07);
+      }
+
+      .portfolio-card {
+        padding: 1.5rem;
+      }
+
+      .best-fit-card {
+        padding: 1.4rem;
+      }
+
+      .best-fit-card i,
+      .service-card i {
+        color: var(--portfolio-accent);
+        font-size: 1.35rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .card-title {
+        color: var(--portfolio-dark);
+        font-size: 1.2rem;
+        font-weight: 850;
+        margin-bottom: 0.5rem;
+      }
+
+      .card-copy {
+        color: var(--portfolio-muted);
+        font-size: 0.98rem;
+      }
+
+      .case-card {
+        overflow: hidden;
+      }
+
+      .case-image {
+        background: var(--portfolio-soft);
+        border-bottom: 1px solid var(--portfolio-border);
+        min-height: 185px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.2rem;
+      }
+
+      .case-image img,
+      .sample-card img,
+      .qualification-card img {
+        max-width: 100%;
+        max-height: 165px;
+        object-fit: contain;
+        border-radius: 14px;
+      }
+
+      .case-content {
+        padding: 1.35rem;
+      }
+
+      .case-label {
+        color: var(--portfolio-accent);
+        font-size: 0.78rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .case-content h3 {
+        color: var(--portfolio-dark);
+        font-size: 1.35rem;
+        font-weight: 900;
+        margin: 0.25rem 0 0.7rem;
+      }
+
+      .case-list {
+        margin-top: 1rem;
+        color: var(--portfolio-text);
+      }
+
+      .case-list p {
+        margin-bottom: 0.55rem;
+      }
+
+      .case-list strong {
+        color: var(--portfolio-dark);
+      }
+
+      .service-card {
+        padding: 1.35rem;
+      }
+
+      .samples-wrapper {
+        margin-top: 1.25rem;
+      }
+
+      .category-heading {
+        color: var(--portfolio-dark);
+        font-size: 1.55rem;
+        font-weight: 900;
+        margin: 2.25rem 0 1rem;
+      }
+
+      .sample-card {
+        padding: 1.1rem;
+      }
+
+      .sample-card figure {
+        min-height: 135px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--portfolio-soft);
+        border-radius: 18px;
+        margin-bottom: 1rem;
+        padding: 1rem;
+      }
+
+      .sample-card h4 {
+        color: var(--portfolio-dark);
+        font-size: 1.05rem;
+        font-weight: 850;
+        margin-bottom: 0.4rem;
+      }
+
+      .sample-card p {
+        color: var(--portfolio-muted);
+        font-size: 0.94rem;
+      }
+
+      .tag {
+        display: inline-block;
+        background: var(--portfolio-soft);
+        color: var(--portfolio-accent-dark);
+        border-radius: 999px;
+        padding: 0.28rem 0.6rem;
+        font-size: 0.76rem;
+        font-weight: 800;
+        margin-bottom: 0.6rem;
+      }
+
+      .qualification-card {
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .qualification-card figure {
+        min-height: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.7rem;
+      }
+
+      .qualification-card h4 {
+        color: var(--portfolio-dark);
+        font-size: 0.95rem;
+        font-weight: 800;
+      }
+
+      .about-panel {
+        background: var(--portfolio-dark);
+        color: #e5e7eb;
+        border-radius: 28px;
+        padding: 2rem;
+        box-shadow: 0 25px 70px rgba(15, 23, 42, 0.18);
+      }
+
+      .about-panel h2,
+      .about-panel h3 {
+        color: #ffffff;
+      }
+
+      .about-panel p {
+        color: #d1d5db;
+      }
+
+      .about-panel .badge {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.16);
+        color: #ffffff;
+      }
+
+      .cta-section {
+        background:
+          radial-gradient(circle at top right, rgba(37, 99, 235, 0.2), transparent 34%),
+          var(--portfolio-dark);
+        color: #ffffff;
+      }
+
+      .cta-card {
+        text-align: center;
+        max-width: 850px;
+        margin: 0 auto;
+      }
+
+      .cta-card .section-title,
+      .cta-card .section-intro {
+        color: #ffffff;
+      }
+
+      .cta-card .section-intro {
+        opacity: 0.86;
+      }
+
+      .social-container img {
+        max-height: 90px;
+        object-fit: contain;
+      }
+
+      .footer-contact {
+        padding: 1.6rem;
+        color: var(--portfolio-muted);
+      }
+
+      .footer-contact a {
+        font-weight: 800;
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid,
+        .grid-2,
+        .grid-3,
+        .grid-4 {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-copy {
+          text-align: center;
+        }
+
+        .hero-copy .portfolio-subtitle {
+          margin-left: auto;
+        }
+
+        .hero-badges,
+        .button-row,
+        .proof-bar {
+          justify-content: center;
+        }
+
+        .nav {
+          border-radius: 0;
+          margin-top: 0;
+        }
+
+        .avatar {
+          max-width: 260px;
+        }
+      }
+    </style>
   </head>
 
   <body>
     <!-- Navbar -->
     <nav class="nav container void-background bg-white shadow-md rounded-md">
       <div class="nav-left">
-        <a href="https://azfarsaleem.medium.com/" class="nav-item" target="_blank" rel="noopener">
+        <a href="https://azfarsaleem.medium.com/" class="nav-item" target="_blank" rel="noopener" aria-label="Medium">
           <span class="icon"><i class="fa-brands fa-medium"></i></span>
         </a>
 
-        <a href="https://github.com/redoz94" class="nav-item" target="_blank" rel="noopener">
+        <a href="https://github.com/redoz94" class="nav-item" target="_blank" rel="noopener" aria-label="GitHub">
           <span class="icon"><i class="fa-brands fa-github"></i></span>
         </a>
 
@@ -37,6 +567,7 @@
           class="nav-item"
           target="_blank"
           rel="noopener"
+          aria-label="LinkedIn"
         >
           <span class="icon"><i class="fa-brands fa-linkedin"></i></span>
         </a>
@@ -46,6 +577,7 @@
           class="nav-item"
           target="_blank"
           rel="noopener"
+          aria-label="Upwork"
         >
           <span class="icon"><i class="fa-brands fa-upwork"></i></span>
         </a>
@@ -53,37 +585,38 @@
 
       <div class="nav-right nav-menu">
         <a class="nav-item" href="#about">About</a>
+        <a class="nav-item" href="#featured">Case Studies</a>
+        <a class="nav-item" href="#services">Services</a>
         <a class="nav-item" href="./ABSCV.pdf" target="_blank" rel="noopener">Resumé</a>
 
         <div class="dropdown" style="cursor: pointer">
           <button class="dropbtn" style="cursor: pointer;">
-            Projects <i class="fa fa-caret-down"></i>
+            Work <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="#vid">Video and Image Technology</a>
+            <a href="#vid">SaaS & Video Technology</a>
             <a href="#fin">Fintech</a>
             <a href="#travel">Travel</a>
-            <a href="#ant">Anthropology</a>
+            <a href="#ant">Research Essays</a>
           </div>
         </div>
 
-        <!-- ✅ Qualifications dropdown (Alan added) -->
         <div class="dropdown">
           <button class="dropbtn">
             Qualifications <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="#coms">Hubspot - Certified Content Marketer</a>
-            <a href="#inbound">Hubspot - Inbound Marketer</a>
-            <a href="#alan">Alan Sharpe - B2B Content Writing Masterclass + ChatGPT Tips</a>
-            <a href="#afm">Digiskills - Affiliate Marketer</a>
-            <a href="#word">Digiskills - Wordpress Developer</a>
-            <a href="#res">FreeCodeCamp - Responsive Web Developer</a>
-            <a href="#cross">Crossover - Cognitive Aptitude.</a>
+            <a href="#coms">HubSpot - Content Marketing</a>
+            <a href="#inbound">HubSpot - Inbound Marketing</a>
+            <a href="#alan">Alan Sharpe - B2B Content Writing</a>
+            <a href="#afm">Digiskills - Affiliate Marketing</a>
+            <a href="#word">Digiskills - WordPress</a>
+            <a href="#res">FreeCodeCamp - Responsive Web Design</a>
+            <a href="#cross">Crossover - Cognitive Aptitude</a>
           </div>
         </div>
 
-        <a class="nav-item" href="#social">Social</a>
+        <a class="nav-item" href="#social">Contact</a>
       </div>
 
       <div class="nav-toggle" id="nav-toggle">
@@ -93,721 +626,646 @@
       </div>
     </nav>
 
-    <!-- About Me -->
-    <section id="about" class="section section-1">
-      <div class="container has-text-centered">
-        <img class="avatar" src="./oz.png" style="height: 400px; width: 400px" alt="Azfar Bilal" />
-      </div>
+    <!-- Hero / About -->
+    <section id="about" class="section hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">B2B SaaS • Fintech • Technology Content</p>
+          <h1 class="portfolio-title">B2B SaaS &amp; Fintech Writer for Tech Brands</h1>
+          <p class="portfolio-subtitle">
+            I help SaaS, fintech, and technology companies transform deep-tech ideas into clear, compelling, search-ready words that build trust, educate buyers, and support prospect generation.
+          </p>
 
-      <div class="container"><br />
-        <p class="intro">
-          Allow me to transform your deep-tech ideas into optimized content that connects with a prospect or user. My B2B SEO-Writing spans across long-form blogs, technical articles, website copy, whitepapers, and thought-leadership material. My efforts combine SEO, research, storytelling, and product understanding to help SaaS, Fintech, and Technology Outfits authoritatively explain what they do with more clarity. Explore a decade of <a href="#projects">My Digital Storytelling</a>.
-  
-        </p>
+          <div class="hero-badges">
+            <span class="badge"><i class="fa-solid fa-magnifying-glass-chart"></i> SEO-led content</span>
+            <span class="badge"><i class="fa-solid fa-layer-group"></i> Product-led articles</span>
+            <span class="badge"><i class="fa-solid fa-file-lines"></i> Whitepapers &amp; long-form</span>
+            <span class="badge"><i class="fa-solid fa-pen-nib"></i> Thought leadership</span>
+          </div>
+
+          <div class="button-row">
+            <a href="#featured" class="portfolio-button button-primary">
+              View Featured Work <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="#social" class="portfolio-button button-secondary">
+              Request Content Ideas <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="proof-bar">
+            <div class="proof-item">
+              <strong>10+</strong>
+              <span>years of writing for digital and technology brands</span>
+            </div>
+            <div class="proof-item">
+              <strong>B2B</strong>
+              <span>SaaS, fintech, video technology, and product content</span>
+            </div>
+            <div class="proof-item">
+              <strong>SEO</strong>
+              <span>blogs, website copy, product explainers, and whitepapers</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="avatar-card">
+          <img class="avatar" src="./oz.png" alt="Azfar Bilal" />
+        </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section section-2">
+    <!-- Best Fit -->
+    <section class="section">
       <div class="container">
-        <div class="has-text-centered">
-          <h3 class="title is-3 col text-center">Projects</h3>
+        <div class="has-text-centered section-heading">
+          <p class="eyebrow">Best Fit</p>
+          <h2 class="section-title">Who I help</h2>
+          <p class="section-intro">
+            I am best suited for teams that need complex products explained clearly, confidently, and commercially.
+          </p>
         </div>
 
-        <!-- Video and Image Technology -->
-        <div>
-          <h3 class="title is-3 col text-center" id="vid">Video and Image Technology</h3>
-        </div>
-
-        <div class="columns is-multiline is-desktop">
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a href="./top.pdf" target="_blank" rel="noopener">
-                      <img src="assets/img/start.png" alt="STARTMOTIONMEDIA" class="compa" />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p>
-                    STARTMOTIONMEDIA required a blog that detailed a comparison of the Top 5 Video
-                    Production Companies at the time I was commissioned to write it. Owing to them
-                    being impressed with my work, I achieved official partner status.
-                  </p>
-                </div>
-              </article>
-            </div>
+        <div class="grid-4">
+          <div class="portfolio-card best-fit-card">
+            <i class="fa-solid fa-cloud"></i>
+            <h3 class="card-title">SaaS companies</h3>
+            <p class="card-copy">SEO blogs, product-led content, software explainers, and thought leadership for B2B software brands.</p>
           </div>
 
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a href="https://www.capcut.com/resource/edit-blury-photos" target="_blank" rel="noopener">
-                      <img src="./screen.png" alt="CapCut blog" class="compa" />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p>
-                    Thoughtfully structuring this blog around keywords provided to me, I wrote this
-                    How-To SEO-piece for Capcut that successfully drives conversions after I compared
-                    The Online Software's Image Upscaler (2x/4x resolution boost) to popular online
-                    Image Editors.
-                  </p>
-                </div>
-              </article>
-            </div>
+          <div class="portfolio-card best-fit-card">
+            <i class="fa-solid fa-building-columns"></i>
+            <h3 class="card-title">Fintech firms</h3>
+            <p class="card-copy">Clear content around payments, digital finance, blockchain, DeFi, financial inclusion, and trust-building.</p>
+          </div>
+
+          <div class="portfolio-card best-fit-card">
+            <i class="fa-solid fa-microchip"></i>
+            <h3 class="card-title">Technology companies</h3>
+            <p class="card-copy">Readable marketing content for technical platforms, enterprise tools, and complex digital products.</p>
+          </div>
+
+          <div class="portfolio-card best-fit-card">
+            <i class="fa-solid fa-bullseye"></i>
+            <h3 class="card-title">Founders &amp; content leads</h3>
+            <p class="card-copy">Reliable long-form content, editorial support, and idea-to-draft execution without excessive hand-holding.</p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="columns is-multiline is-desktop">
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a href="./VIDIZMOListicle.pdf" target="_blank" rel="noopener">
-                      <img src="assets/img/comp.png" alt="VIDIZMO listicle" class="compa" />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p>
-                    Working with The World's Greatest Video Content Management System, I was
-                    assigned to write an SEO-Blog that extensively details the functionalities of Top
-                    Video Video Streaming Platforms.
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a
-                      href="https://blog.vidizmo.com/5-ways-you-can-use-video-streaming-to-enhance-your-learning-and-development-programs"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <img src="assets/img/samba.png" alt="VIDIZMO blog" class="compa" />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p>
-                    Employee Training using Video Content is incredibly efficient. In this SEO-blog,
-                    I describe the Various Use Cases and Advantages of Video Content.
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
+    <!-- Featured Case Studies -->
+    <section id="featured" class="section">
+      <div class="container">
+        <div class="has-text-centered section-heading">
+          <p class="eyebrow">Featured Case Studies</p>
+          <h2 class="section-title">Selected proof for SaaS, fintech, and technology buyers</h2>
+          <p class="section-intro">
+            These samples are presented as mini case studies so potential clients can quickly understand the project, audience, role, and business value.
+          </p>
         </div>
 
-        <div class="columns is-multiline is-desktop">
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a href="./VIDIZMOWhitepaper.pdf" target="_blank" rel="noopener">
-                      <img src="assets/img/white.png" alt="VIDIZMO whitepaper" class="compa" />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p>
-                    Clicking on the image above, you will find my polished Long-Form writing that
-                    details how Learning and Development Professionals are yielding numerous
-                    advantages by using Video Streaming Methods.
-                  </p>
-                </div>
-              </article>
+        <div class="grid-3">
+          <article class="case-card">
+            <a href="./VIDIZMOWhitepaper.pdf" target="_blank" rel="noopener">
+              <div class="case-image">
+                <img src="assets/img/white.png" alt="VIDIZMO whitepaper" />
+              </div>
+            </a>
+            <div class="case-content">
+              <p class="case-label">Enterprise SaaS • Whitepaper</p>
+              <h3>VIDIZMO: Learning &amp; Development Whitepaper</h3>
+              <p class="card-copy">
+                Long-form educational content for an enterprise video content management platform serving learning and development professionals.
+              </p>
+              <div class="case-list">
+                <p><strong>Goal:</strong> Explain how video streaming supports employee training and organisational learning.</p>
+                <p><strong>Audience:</strong> L&amp;D managers, enterprise teams, and decision-makers evaluating video platforms.</p>
+                <p><strong>My role:</strong> Research, structure, long-form writing, and content framing.</p>
+                <p><strong>Business value:</strong> Turned platform functionality into educational, authority-building content.</p>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a
-                      href="https://blog.vidizmo.com/video-streaming-in-the-learning-and-development-industry-in-2017"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <img
-                        src="assets/img/learn.png"
-                        alt="Video streaming in L&D (2017)"
-                        class="compa"
-                        style="padding-top: 3px; height: 153px"
-                      />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p>
-                    Have a read of my SEO-Post on how Video Streaming effectively fostered the
-                    efforts of Learning and Development Professionals in 2017.
-                  </p>
-                </div>
-              </article>
+          <article class="case-card">
+            <a
+              href="https://tecstik.com/TecStik-Blog/Revealing-Pakistan's-Financial-Structure"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="case-image">
+                <img src="assets/img/rev.png" alt="Pakistan financial structure article" />
+              </div>
+            </a>
+            <div class="case-content">
+              <p class="case-label">Fintech • Thought Leadership</p>
+              <h3>TecStik: Pakistan’s Financial Structure</h3>
+              <p class="card-copy">
+                A fintech authority article built to explain Pakistan’s financial ecosystem to readers interested in finance, regulation, and market structure.
+              </p>
+              <div class="case-list">
+                <p><strong>Goal:</strong> Build subject-matter authority for TecStik’s fintech blog.</p>
+                <p><strong>Audience:</strong> Pakistani finance readers, founders, investors, and fintech-curious professionals.</p>
+                <p><strong>My role:</strong> Research, writing, source-based explanation, and blog positioning.</p>
+                <p><strong>Business value:</strong> Helped frame TecStik as a fintech voice with educational depth.</p>
+              </div>
             </div>
-          </div>
+          </article>
+
+          <article class="case-card">
+            <a href="https://www.capcut.com/resource/edit-blury-photos" target="_blank" rel="noopener">
+              <div class="case-image">
+                <img src="./screen.png" alt="CapCut image upscaler article" />
+              </div>
+            </a>
+            <div class="case-content">
+              <p class="case-label">Product-led SEO • Image Technology</p>
+              <h3>CapCut: Image Upscaler SEO Blog</h3>
+              <p class="card-copy">
+                A search-led how-to article comparing CapCut’s image upscaler with other online image editing tools.
+              </p>
+              <div class="case-list">
+                <p><strong>Goal:</strong> Convert product functionality into an educational SEO article.</p>
+                <p><strong>Audience:</strong> Creators, marketers, and users looking for fast image enhancement tools.</p>
+                <p><strong>My role:</strong> Keyword-led structure, writing, comparison framing, and product explanation.</p>
+                <p><strong>Business value:</strong> Helped connect search intent with product awareness and conversion potential.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="has-text-centered section-heading">
+          <p class="eyebrow">Services</p>
+          <h2 class="section-title">What you can hire me for</h2>
+          <p class="section-intro">
+            I help B2B teams move from rough product ideas to clear, publishable content assets.
+          </p>
         </div>
 
-        <div class="columns is-multiline is-desktop">
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a href="./edu.pdf" target="_blank" rel="noopener">
-                      <img src="assets/img/vect.png" alt="Video for training & development" class="compa" />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p>
-                    My original SEO-writing explains how Video is an effective solution to generate
-                    several benefits corresponding with Employee Training and Development.
-                  </p>
-                </div>
-              </article>
-            </div>
+        <div class="grid-3">
+          <div class="service-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3 class="card-title">SEO Blog Writing</h3>
+            <p class="card-copy">Search-led long-form articles for SaaS, fintech, and technology brands that need discoverability and clarity.</p>
           </div>
 
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a href="./Website.pdf" target="_blank" rel="noopener">
-                      <img src="assets/img/vect.png" alt="Video CMS website content" class="compa" />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p>
-                    This SEO website-content explains how The Video Content Management System
-                    efficiently enhances organizational operations. My material increased their
-                    Conversion Rate by a Staggering 40% amid the  traffic boost.
-                  </p>
-                </div>
-              </article>
-            </div>
+          <div class="service-card">
+            <i class="fa-solid fa-lightbulb"></i>
+            <h3 class="card-title">Thought Leadership Content</h3>
+            <p class="card-copy">Founder-led articles, industry explainers, LinkedIn post ideas, and POV pieces that communicate authority.</p>
+          </div>
+
+          <div class="service-card">
+            <i class="fa-solid fa-file-circle-check"></i>
+            <h3 class="card-title">Whitepapers &amp; Lead Magnets</h3>
+            <p class="card-copy">Research-driven long-form assets that help educate buyers, support lead generation, and deepen trust.</p>
+          </div>
+
+          <div class="service-card">
+            <i class="fa-solid fa-window-maximize"></i>
+            <h3 class="card-title">Website &amp; Product Copy</h3>
+            <p class="card-copy">Homepage sections, service pages, landing pages, and product explainers for complex technical offerings.</p>
+          </div>
+
+          <div class="service-card">
+            <i class="fa-solid fa-map"></i>
+            <h3 class="card-title">Content Strategy Support</h3>
+            <p class="card-copy">Keyword mapping, article briefs, content calendars, topic clusters, and editorial planning support.</p>
+          </div>
+
+          <div class="service-card">
+            <i class="fa-solid fa-envelope-open-text"></i>
+            <h3 class="card-title">Email &amp; Sales Enablement</h3>
+            <p class="card-copy">Nurture emails, outreach copy, sales-support assets, and repurposed content for buyer education.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="has-text-centered section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2 class="section-title">Additional writing samples by category</h2>
+          <p class="section-intro">
+            Find my work across SaaS, video technology, fintech, travel, and research-led essays.
+          </p>
+        </div>
+
+        <!-- SaaS & Video Technology -->
+        <div class="samples-wrapper">
+          <h3 class="category-heading" id="vid">SaaS &amp; Video Technology</h3>
+          <div class="grid-3">
+            <article class="sample-card">
+              <a href="./top.pdf" target="_blank" rel="noopener">
+                <figure>
+                  <img src="assets/img/start.png" alt="STARTMOTIONMEDIA" />
+                </figure>
+              </a>
+              <span class="tag">B2B blog</span>
+              <h4>STARTMOTIONMEDIA: Top Video Production Companies</h4>
+              <p>Comparison-style blog content for a video production brand, written to support discovery and buyer education.</p>
+            </article>
+
+            <article class="sample-card">
+              <a href="./VIDIZMOListicle.pdf" target="_blank" rel="noopener">
+                <figure>
+                  <img src="assets/img/comp.png" alt="VIDIZMO listicle" />
+                </figure>
+              </a>
+              <span class="tag">SEO listicle</span>
+              <h4>VIDIZMO: Top Video Streaming Platforms</h4>
+              <p>Search-focused listicle explaining platform functionality and use cases within the video streaming software category.</p>
+            </article>
+
+            <article class="sample-card">
+              <a
+                href="https://blog.vidizmo.com/5-ways-you-can-use-video-streaming-to-enhance-your-learning-and-development-programs"
+                target="_blank"
+                rel="noopener"
+              >
+                <figure>
+                  <img src="assets/img/samba.png" alt="VIDIZMO blog" />
+                </figure>
+              </a>
+              <span class="tag">Use-case article</span>
+              <h4>VIDIZMO: Video Streaming for Learning &amp; Development</h4>
+              <p>Educational SEO blog showing how video supports employee training, learning programmes, and organisational development.</p>
+            </article>
+
+            <article class="sample-card">
+              <a
+                href="https://blog.vidizmo.com/video-streaming-in-the-learning-and-development-industry-in-2017"
+                target="_blank"
+                rel="noopener"
+              >
+                <figure>
+                  <img src="assets/img/learn.png" alt="Video streaming in L&D" />
+                </figure>
+              </a>
+              <span class="tag">Industry article</span>
+              <h4>Video Streaming in the L&amp;D Industry</h4>
+              <p>Industry-focused piece connecting video streaming technology with workplace training and development needs.</p>
+            </article>
+
+            <article class="sample-card">
+              <a href="./edu.pdf" target="_blank" rel="noopener">
+                <figure>
+                  <img src="assets/img/vect.png" alt="Video for training and development" />
+                </figure>
+              </a>
+              <span class="tag">Training content</span>
+              <h4>Video for Employee Training &amp; Development</h4>
+              <p>SEO writing explaining how video can improve training outcomes, knowledge retention, and learning accessibility.</p>
+            </article>
+
+            <article class="sample-card">
+              <a href="./Website.pdf" target="_blank" rel="noopener">
+                <figure>
+                  <img src="assets/img/vect.png" alt="Video CMS website content" />
+                </figure>
+              </a>
+              <span class="tag">Website copy</span>
+              <h4>Video CMS Website Content</h4>
+              <p>Conversion-focused website content for a video content management platform, written to clarify platform value and use cases.</p>
+            </article>
           </div>
         </div>
 
         <!-- Fintech -->
-        <div>
-          <h3 class="title is-3 col text-center" id="fin">Fintech</h3>
-        </div>
+        <div class="samples-wrapper">
+          <h3 class="category-heading" id="fin">Fintech</h3>
+          <div class="grid-2">
+            <article class="sample-card">
+              <a
+                href="https://tecstik.com/TecStik-Blog/revolutionizing-finance-unleash-the-power-of-fintech-with-tecstik"
+                target="_blank"
+                rel="noopener"
+              >
+                <figure>
+                  <img src="assets/img/revo.png" alt="TecStik fintech solutions" />
+                </figure>
+              </a>
+              <span class="tag">Fintech blog</span>
+              <h4>TecStik: Unleashing the Power of Fintech</h4>
+              <p>Blog content explaining how fintech can broaden access to financial services and support digital finance adoption.</p>
+            </article>
 
-        <div class="columns is-multiline is-desktop">
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a
-                      href="https://tecstik.com/TecStik-Blog/Revealing-Pakistan's-Financial-Structure"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <img
-                        src="assets/img/rev.png"
-                        alt="Pakistan financial structure"
-                        class="compa"
-                        style="padding-top: 3px; height: 153px"
-                      />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p>
-                    Explore Pakistan’s financial landscape to study detailed insights of the
-                    country's financial operations - simultaneously boosting your income. I wrote
-                    this for TecStik.com's Blog Readers.
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a
-                      href="https://tecstik.com/TecStik-Blog/revolutionizing-finance-unleash-the-power-of-fintech-with-tecstik"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <img src="assets/img/revo.png" alt="TecStik solutions" class="compa" />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p>
-                    Fintech has played a huge role in broadening the reach of financial services to
-                    remote areas. Discover how TecStik's Fintech helps users boost their financial
-                    capacities.
-                  </p>
-                </div>
-              </article>
-            </div>
+            <article class="sample-card">
+              <a
+                href="https://tecstik.com/TecStik-Blog/Revealing-Pakistan's-Financial-Structure"
+                target="_blank"
+                rel="noopener"
+              >
+                <figure>
+                  <img src="assets/img/rev.png" alt="Pakistan financial structure" />
+                </figure>
+              </a>
+              <span class="tag">Authority article</span>
+              <h4>Revealing Pakistan’s Financial Structure</h4>
+              <p>Research-led fintech content explaining Pakistan’s financial landscape, financial institutions, and market context.</p>
+            </article>
           </div>
         </div>
 
         <!-- Travel -->
-        <div>
-          <h3 class="title is-3 col text-center" id="travel">Travel</h3>
-        </div>
+        <div class="samples-wrapper">
+          <h3 class="category-heading" id="travel">Travel &amp; Destination Content</h3>
+          <div class="grid-2">
+            <article class="sample-card">
+              <a href="https://soulofsaudi.com/f1-in-saudi-arabia/" target="_blank" rel="noopener">
+                <figure>
+                  <img src="assets/img/saudi.png" alt="F1 in Saudi Arabia" />
+                </figure>
+              </a>
+              <span class="tag">Destination blog</span>
+              <h4>Soul of Saudi: F1 in Saudi Arabia</h4>
+              <p>Tourism-focused article written to promote interest in the Formula One Grand Prix experience in Jeddah.</p>
+            </article>
 
-        <div class="columns is-multiline is-desktop">
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a href="https://soulofsaudi.com/f1-in-saudi-arabia/" target="_blank" rel="noopener">
-                      <img
-                        src="assets/img/saudi.png"
-                        alt="F1 in Saudi Arabia"
-                        class="compa"
-                        style="padding-top: 3px; height: 153px"
-                      />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p>
-                    Working with the Saudi Arabian Government, I crafted a compelling piece that
-                    encourages tourists to experience the upcoming Formula One Grand Prix scheduled
-                    on 20/04/2025 in Jeddah, Saudi Arabia. Discover information of the event by
-                    clicking the image above.
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a href="AlBaha.pdf" target="_blank" rel="noopener">
-                      <img
-                        src="assets/img/saudi.png"
-                        alt="Raghadan Forest, Al-Baha"
-                        class="compa"
-                        style="padding-top: 3px; height: 153px"
-                      />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p>
-                    Soul of Saudi - A Popular Tourist Blog, assigned me an article to underline the
-                    host of experiences awaiting the eager traveller at Raghadan Forest, Al-Baha.
-                    My work closely follows the style guidelines of the relevant blog.
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Anthropology -->
-    <section class="section section-2">
-      <div class="container">
-        <div>
-          <h3 class="title is-3 col text-center" id="ant">Anthropology</h3>
-        </div>
-
-        <div class="columns is-multiline is-desktop">
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a
-                      href="https://azfarsaleem.medium.com/how-the-media-misrepresents-gendered-violence-58cd687deadb"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <img src="assets/img/how.png" alt="Gendered violence & media" class="compa" />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p>
-                    This academic report outlines how The Media underplays the intensity of Gendered
-                    Violence. Read about different related instances identified by scholars.
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a
-                      href="https://azfarsaleem.medium.com/how-new-media-technologies-are-shaping-transnational-activism-and-political-protest-in-recent-years-adc2108f1cc9"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <img src="assets/img/trans.png" alt="Transnational activism" class="compa" />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p>
-                    New Media Technologies have played a significant role in sparking worldwide
-                    protests. This blog demonstrates the importance of the internet in organizing
-                    demonstrations that went as far as toppling governments.
-                  </p>
-                </div>
-              </article>
-            </div>
+            <article class="sample-card">
+              <a href="AlBaha.pdf" target="_blank" rel="noopener">
+                <figure>
+                  <img src="assets/img/saudi.png" alt="Raghadan Forest Al-Baha" />
+                </figure>
+              </a>
+              <span class="tag">Travel article</span>
+              <h4>Soul of Saudi: Raghadan Forest, Al-Baha</h4>
+              <p>Destination article following brand style guidelines and highlighting experiences for travellers visiting Al-Baha.</p>
+            </article>
           </div>
         </div>
 
-        <div class="columns is-multiline is-desktop">
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a
-                      href="https://azfarsaleem.medium.com/spike-lees-powerful-intimation-of-racial-discrimination-do-the-right-thing-b45aeaa89ac3"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <img src="assets/img/the.png" alt="Do the Right Thing analysis" class="compa" />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p>
-                    The corresponding Film is a masterpiece directed by Renowned Filmmaker: Spike Lee.
-                    Read about the movie displaying how marginalized groups lead their lives.
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
+        <!-- Research Essays -->
+        <div class="samples-wrapper">
+          <h3 class="category-heading" id="ant">Selected Essays &amp; Research Writing</h3>
+          <p class="section-intro" style="margin-left: 0; margin-bottom: 1rem;">
+            These essays showcase my ability to handle research-heavy ideas, cultural analysis, theory, and detailed arguments.
+          </p>
 
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a
-                      href="https://azfarsaleem.medium.com/thematically-focusing-on-issues-of-race-in-cinema-ea8c4fb0c520"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <img
-                        src="assets/img/mal.png"
-                        alt="Malcolm X & race in cinema"
-                        class="compa"
-                        style="padding-top: 3px; height: 153px"
-                      />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p>
-                    Malcolm X was an incredibly prolific racial activist. Denzel Washington
-                    plays the advocate in this biopic of the icon. Demonstrating how Malcolm X became
-                    a preliminary legend who fought for African-American Rights.
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
+          <div class="grid-3">
+            <article class="sample-card">
+              <a
+                href="https://azfarsaleem.medium.com/how-the-media-misrepresents-gendered-violence-58cd687deadb"
+                target="_blank"
+                rel="noopener"
+              >
+                <figure>
+                  <img src="assets/img/how.png" alt="Gendered violence and media" />
+                </figure>
+              </a>
+              <span class="tag">Media analysis</span>
+              <h4>How the Media Misrepresents Gendered Violence</h4>
+              <p>Research-led essay exploring how media narratives can underplay the intensity and structure of gendered violence.</p>
+            </article>
 
-        <div class="columns is-multiline is-desktop">
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a
-                      href="https://azfarsaleem.medium.com/discussing-michel-foucaults-concept-of-power-in-relation-to-race-b7d09f33cad5"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <img
-                        src="assets/img/mic.png"
-                        alt="Foucault & power"
-                        class="compa"
-                        style="padding-top: 3px; height: 153px"
-                      />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p>
-                    Michel Foucault’s idea of power can be applied to the concept of race in terms of
-                    the various societal discourses that have circulated across Western Society. His
-                    conception of racism as inherently a form of bio-political government is the
-                    first of its kind, and deserves appreciation because of its high authenticity.
-                    Read how he shed light on the phenomenon by clicking on the image above.
-                  </p>
-                </div>
-              </article>
-            </div>
+            <article class="sample-card">
+              <a
+                href="https://azfarsaleem.medium.com/how-new-media-technologies-are-shaping-transnational-activism-and-political-protest-in-recent-years-adc2108f1cc9"
+                target="_blank"
+                rel="noopener"
+              >
+                <figure>
+                  <img src="assets/img/trans.png" alt="Transnational activism" />
+                </figure>
+              </a>
+              <span class="tag">Technology &amp; society</span>
+              <h4>New Media Technologies &amp; Transnational Activism</h4>
+              <p>Essay on the role of digital media in protest, activism, and cross-border political mobilisation.</p>
+            </article>
+
+            <article class="sample-card">
+              <a
+                href="https://azfarsaleem.medium.com/spike-lees-powerful-intimation-of-racial-discrimination-do-the-right-thing-b45aeaa89ac3"
+                target="_blank"
+                rel="noopener"
+              >
+                <figure>
+                  <img src="assets/img/the.png" alt="Do the Right Thing analysis" />
+                </figure>
+              </a>
+              <span class="tag">Film criticism</span>
+              <h4>Spike Lee’s Do the Right Thing</h4>
+              <p>Critical essay exploring race, marginalisation, and social conflict through film analysis.</p>
+            </article>
+
+            <article class="sample-card">
+              <a
+                href="https://azfarsaleem.medium.com/thematically-focusing-on-issues-of-race-in-cinema-ea8c4fb0c520"
+                target="_blank"
+                rel="noopener"
+              >
+                <figure>
+                  <img src="assets/img/mal.png" alt="Malcolm X and race in cinema" />
+                </figure>
+              </a>
+              <span class="tag">Cinema essay</span>
+              <h4>Race in Cinema: Malcolm X</h4>
+              <p>Long-form analysis of race, representation, and biographical storytelling in cinema.</p>
+            </article>
+
+            <article class="sample-card">
+              <a
+                href="https://azfarsaleem.medium.com/discussing-michel-foucaults-concept-of-power-in-relation-to-race-b7d09f33cad5"
+                target="_blank"
+                rel="noopener"
+              >
+                <figure>
+                  <img src="assets/img/mic.png" alt="Michel Foucault and power" />
+                </figure>
+              </a>
+              <span class="tag">Theory essay</span>
+              <h4>Foucault’s Concept of Power in Relation to Race</h4>
+              <p>Research-heavy theoretical essay applying Foucault’s ideas of power, discourse, and biopolitics to race.</p>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Qualifications -->
-    <section class="section section-2">
+    <section class="section">
       <div class="container">
-        <div class="has-text-centered">
-          <h3 class="title is-3 col text-center" id="quals">Qualifications</h3>
+        <div class="has-text-centered section-heading">
+          <p class="eyebrow">Qualifications</p>
+          <h2 class="section-title" id="quals">Certifications &amp; tools</h2>
+          <p class="section-intro">
+            Training across content marketing, inbound marketing, B2B writing, affiliate marketing, WordPress, responsive design, and problem-solving.
+          </p>
         </div>
 
-        <!-- HubSpot row -->
-        <div class="columns is-multiline is-desktop">
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a
-                      href="https://app.hubspot.com/academy/achievements/nv38c1fy/en/1/azfar-saleem/content-marketing"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <img
-                        src="assets/img/Hubspot.png"
-                        alt="HubSpot Content Marketing"
-                        class="compa"
-                        id="coms"
-                      />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p class="has-text-centered">Hubspot Academy - Certified Content Marketer</p>
-                </div>
-              </article>
-            </div>
-          </div>
+        <div class="grid-4">
+          <article class="qualification-card">
+            <a
+              href="https://app.hubspot.com/academy/achievements/nv38c1fy/en/1/azfar-saleem/content-marketing"
+              target="_blank"
+              rel="noopener"
+            >
+              <figure>
+                <img src="assets/img/Hubspot.png" alt="HubSpot Content Marketing" id="coms" />
+              </figure>
+            </a>
+            <h4>HubSpot Academy - Content Marketing</h4>
+          </article>
 
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a
-                      href="https://app.hubspot.com/academy/achievements/69870hcw/en/1/azfar-saleem/inbound-marketing"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <img
-                        src="assets/img/HubspotInboundMarketingCertificate.png"
-                        alt="HubSpot Inbound Marketing"
-                        class="compa"
-                        id="inbound"
-                      />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <p class="has-text-centered">Hubspot Academy - Inbound Marketing Certified</p>
-                </div>
-              </article>
-            </div>
-          </div>
+          <article class="qualification-card">
+            <a
+              href="https://app.hubspot.com/academy/achievements/69870hcw/en/1/azfar-saleem/inbound-marketing"
+              target="_blank"
+              rel="noopener"
+            >
+              <figure>
+                <img src="assets/img/HubspotInboundMarketingCertificate.png" alt="HubSpot Inbound Marketing" id="inbound" />
+              </figure>
+            </a>
+            <h4>HubSpot Academy - Inbound Marketing</h4>
+          </article>
+
+          <article class="qualification-card">
+            <a href="./B2B Content Writing Certification Alan Sharpe.pdf" target="_blank" rel="noopener">
+              <figure>
+                <img src="./alan.png" alt="Alan Sharpe B2B Content Writing Masterclass" id="alan" />
+              </figure>
+            </a>
+            <h4>Alan Sharpe - B2B Content Writing Masterclass + ChatGPT Tips</h4>
+          </article>
+
+          <article class="qualification-card">
+            <a href="./aff.pdf" target="_blank" rel="noopener">
+              <figure>
+                <img src="assets/img/aff.png" alt="Digiskills Affiliate Marketing" id="afm" />
+              </figure>
+            </a>
+            <h4>Digiskills - Affiliate Marketing</h4>
+          </article>
+
+          <article class="qualification-card">
+            <a href="./WordpressCertificateDigiskills.pdf" target="_blank" rel="noopener">
+              <figure>
+                <img src="assets/img/word.png" alt="Digiskills WordPress" id="word" />
+              </figure>
+            </a>
+            <h4>Digiskills - WordPress Developer</h4>
+          </article>
+
+          <article class="qualification-card">
+            <a
+              href="https://www.freecodecamp.org/certification/AzfarSaleem/responsive-web-design"
+              target="_blank"
+              rel="noopener"
+            >
+              <figure>
+                <img src="assets/img/fcc.png" alt="FreeCodeCamp Responsive Web Design" id="res" />
+              </figure>
+            </a>
+            <h4>FreeCodeCamp - Responsive Web Design</h4>
+          </article>
+
+          <article class="qualification-card">
+            <a href="assets/img/CrossoverCognitiveAptitudeTest.png" target="_blank" rel="noopener">
+              <figure>
+                <img src="assets/img/CrossoverCognitiveAptitudeTest.png" alt="Crossover Cognitive Aptitude Test" id="cross" />
+              </figure>
+            </a>
+            <h4>Crossover - Cognitive Aptitude Test</h4>
+          </article>
+
+          <article class="qualification-card">
+            <a
+              href="https://www.credly.com/badges/8e0dbee3-7229-4bab-a833-94ce04a96025"
+              target="_blank"
+              rel="noopener"
+            >
+              <figure>
+                <img src="assets/img/mckinsey.png" alt="McKinsey Forward Program" />
+              </figure>
+            </a>
+            <h4>McKinsey Academy - Forward Program</h4>
+          </article>
         </div>
-
-        <!-- ✅ Alan Sharpe certification (ADDED, without removing any others) -->
-        <div class="columns is-multiline is-desktop">
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a href="./B2B Content Writing Certification Alan Sharpe.pdf" target="_blank" rel="noopener">
-                      <img
-                        src="./alan.png"
-                        alt="Alan Sharpe - B2B Content Writing Masterclass + ChatGPT Tips (Udemy)"
-                        class="compa"
-                        id="alan"
-                      />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <h5 class="has-text-centered">
-                    Alan Sharpe - B2B Content Writing Masterclass + ChatGPT Tips (Udemy)
-                  </h5>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-
-        <!-- Digiskills row -->
-        <div class="columns is-multiline is-desktop">
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a href="./aff.pdf" target="_blank" rel="noopener">
-                      <img src="assets/img/aff.png" alt="Digiskills Affiliate" class="compa" id="afm" />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <h5 class="has-text-centered">Digiskills - Affiliate Marketer</h5>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a href="./WordpressCertificateDigiskills.pdf" target="_blank" rel="noopener">
-                      <img src="assets/img/word.png" alt="Digiskills WordPress" class="compa" id="word" />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <h5 class="has-text-centered">Digiskills - Wordpress Developer</h5>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-
-        <!-- FreeCodeCamp + Crossover row -->
-        <div class="columns is-multiline is-desktop">
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a
-                      href="https://www.freecodecamp.org/certification/AzfarSaleem/responsive-web-design"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <img src="assets/img/fcc.png" alt="FreeCodeCamp RWD" class="compa" id="res" />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <h5 class="has-text-centered">FreeCodeCamp - Responsive Web Developer</h5>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a href="assets/img/CrossoverCognitiveAptitudeTest.png" target="_blank" rel="noopener">
-                      <img
-                        src="assets/img/CrossoverCognitiveAptitudeTest.png"
-                        alt="Crossover Cognitive Aptitude"
-                        class="compa"
-                        style="height: 235px"
-                        id="cross"
-                      />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <h5 class="has-text-centered">Crossover - Cognitive Aptitude Test</h5>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-
-        <!-- McKinsey row -->
-        <div class="columns is-multiline is-desktop">
-          <div class="column">
-            <div class="box project-text">
-              <article>
-                <div>
-                  <figure class="image project-figure">
-                    <a
-                      href="https://www.credly.com/badges/8e0dbee3-7229-4bab-a833-94ce04a96025"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <img src="assets/img/mckinsey.png" alt="McKinsey Forward Program" class="compa" />
-                    </a>
-                  </figure>
-                </div>
-                <div>
-                  <h5 class="has-text-centered">Mckinsey Academy - Forward Program</h5>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- Social -->
-    <section id="social" class="section section-3">
+    <!-- Human About -->
+    <section class="section">
       <div class="container">
-        <div class="has-text-centered">
-          <h3 class="title is-3">Connect with me...</h3>
+        <div class="about-panel">
+          <div class="grid-2">
+            <div>
+              <p class="eyebrow">About Azfar</p>
+              <h2 class="section-title">A writer trained by technology, media, anthropology, and philosophy.</h2>
+            </div>
+            <div>
+              <p>
+                I am a B2B content writer with a background in media and anthropology, and practical experience writing for SaaS, fintech, video technology, travel, and research-heavy topics.
+              </p>
+              <p>
+                My strongest work sits where technical products need human explanation: product-led SEO blogs, educational articles, long-form assets, thought leadership, and website content that helps readers understand why a solution matters.
+              </p>
+
+              <div class="hero-badges">
+                <span class="badge">SEO writing</span>
+                <span class="badge">Technical explainers</span>
+                <span class="badge">Fintech storytelling</span>
+                <span class="badge">Research-led content</span>
+                <span class="badge">WordPress &amp; web basics</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="social-container columns">
-          <div class="column is-6 has-text-centered">
-            <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/azfarbilal-contentwriter/">
-              <img src="assets/img/linkedin.png" alt="LinkedIn" />
-            </a>
-          </div>
+    <!-- Contact CTA / Social -->
+    <section id="social" class="section cta-section">
+      <div class="container cta-card">
+        <p class="eyebrow">Work With Me</p>
+        <h2 class="section-title">Need B2B SaaS, fintech, or technology content?</h2>
+        <p class="section-intro">
+          Send me your product, target audience, and content goal. I will suggest 2–3 content ideas you can use to build trust, educate buyers, or improve search visibility.
+        </p>
 
-          <div class="column is-6 has-text-centered">
-            <a href="mailto:azfarbil@gmail.com?Subject=upport" style="color: White">
-              <img src="assets/img/email.jpg" alt="Email" />
-            </a>
-          </div>
+        <div class="button-row" style="justify-content: center;">
+          <a
+            href="mailto:azfarbil@gmail.com?subject=Content%20Project%20Inquiry&body=Hi%20Azfar%2C%0D%0A%0D%0AI%27m%20reaching%20out%20about%20a%20B2B%20content%20project.%0D%0A%0D%0AProduct%2Fcompany%3A%0D%0ATarget%20audience%3A%0D%0AContent%20goal%3A%0D%0A"
+            class="portfolio-button button-primary"
+          >
+            Request Content Ideas <i class="fa-solid fa-envelope"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/azfarbilal-contentwriter/"
+            target="_blank"
+            rel="noopener"
+            class="portfolio-button button-secondary"
+          >
+            Connect on LinkedIn <i class="fa-brands fa-linkedin"></i>
+          </a>
+
+          <a
+            href="https://wa.me/+923352070555"
+            target="_blank"
+            rel="noopener"
+            class="portfolio-button button-secondary"
+          >
+            WhatsApp Me <i class="fa-brands fa-whatsapp"></i>
+          </a>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <section class="section-4 has-text-centered container">
-      <a href="https://wa.me/+923352070555" target="_blank" rel="noopener">
-        Azfar Saleem's WhatsApp/Mobile Number: +923352070555
-      </a>
+    <section class="section-4 has-text-centered container footer-contact">
+      <p>
+         Azfar Saleem • B2B SaaS &amp; Fintech Content Writer •
+        <a href="mailto:azfarbil@gmail.com">azfarbil@gmail.com</a> •
+        <a href="https://wa.me/+923352070555" target="_blank" rel="noopener">+923352070555</a>
+      </p>
     </section>
 
     <!-- Scripts -->
