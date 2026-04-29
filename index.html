@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Azfar Bilal | B2B SaaS & Fintech Content Writer</title>
+    <title>Azfar Saleem | B2B SaaS & Fintech Content Writer</title>
 
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
     <link rel="stylesheet" type="text/css" href="./styles.css" />
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
 
-    <meta name="author" content="Azfar Bilal" />
+    <meta name="author" content="Azfar Saleem" />
     <meta
       name="description"
       content="B2B SaaS and fintech content writer helping technology brands turn complex products into clear, compelling, search-optimized content."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta property="og:title" content="Azfar Bilal | B2B SaaS & Fintech Content Writer" />
+    <meta property="og:title" content="Azfar Saleem | B2B SaaS & Fintech Content Writer" />
     <meta
       property="og:description"
       content="SEO blogs, whitepapers, product-led content, and thought leadership for SaaS, fintech, and technology companies."
@@ -331,7 +331,7 @@
       }
 
       .case-card {
-        overflow: hidden;
+        overflow: visible;
       }
 
       .case-image {
@@ -547,6 +547,190 @@
           max-width: 260px;
         }
       }
+      /* =========================================
+   GLOBAL RESPONSIVE / CONTENT VISIBILITY FIX
+========================================= */
+
+/* Prevent ALL elements from overflowing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Allow full viewport rendering */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make all media responsive */
+img,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure text NEVER disappears or gets clipped */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+div,
+button {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Make containers fully flexible */
+.container,
+.section,
+.hero-section,
+.hero-grid,
+.grid-2,
+.grid-3,
+.grid-4,
+.case-card,
+.sample-card,
+.service-card,
+.portfolio-card,
+.about-panel,
+.cta-card,
+.nav {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Remove accidental clipping */
+.case-card,
+.sample-card,
+.portfolio-card,
+.service-card,
+.about-panel,
+.avatar-card {
+  overflow: visible;
+}
+
+/* Make grids responsive automatically */
+.grid-2,
+.grid-3,
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Hero section responsiveness */
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+}
+
+/* Prevent buttons from overflowing */
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.portfolio-button {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+}
+
+/* Responsive navbar */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Dropdown fixes */
+.dropdown-content {
+  max-width: 90vw;
+  top: 100%;
+}
+
+/* Prevent giant text from breaking mobile */
+.portfolio-title {
+  font-size: clamp(2rem, 8vw, 4.8rem);
+  line-height: 1.1;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .portfolio-title {
+    font-size: 2.2rem;
+  }
+
+  .portfolio-subtitle {
+    font-size: 1rem;
+  }
+
+  .proof-bar {
+    flex-direction: column;
+  }
+
+  .proof-item {
+    width: 100%;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  .portfolio-button {
+    width: 100%;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-left,
+  .nav-right {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .avatar {
+    max-width: 100%;
+  }
+
+  .footer-contact {
+    padding: 1rem;
+  }
+}
     </style>
   </head>
 
