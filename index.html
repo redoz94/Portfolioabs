@@ -385,12 +385,20 @@
         padding: 1.2rem;
       }
 
-      .case-image img, .sample-card img, .qualification-card img {
-        max-width: 100%;
-        max-height: 165px;
-        object-fit: contain;
-        border-radius: 14px;
-      }
+ .case-image img, .sample-card img {
+  max-width: 100%;
+  max-height: 165px;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+.qualification-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 14px;
+  display: block;
+}
 
       .case-content { padding: 1.35rem; }
 
@@ -438,13 +446,15 @@
 
       .qualification-card { padding: 1rem; text-align: center; }
 
-      .qualification-card figure {
-        min-height: 130px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 0.7rem;
-      }
+     .qualification-card figure {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.7rem;
+  overflow: hidden;
+}
 
       .qualification-card h4 { color: var(--portfolio-dark); font-size: 0.95rem; font-weight: 800; }
 
@@ -615,15 +625,16 @@
           <button class="dropbtn">
             Qualifications <i class="fa fa-caret-down"></i>
           </button>
-          <div class="dropdown-content">
-            <a href="#coms">HubSpot - Content Marketing</a>
-            <a href="#inbound">HubSpot - Inbound Marketing</a>
-            <a href="#alan">Alan Sharpe - B2B Content Writing</a>
-            <a href="#afm">Digiskills - Affiliate Marketing</a>
-            <a href="#word">Digiskills - WordPress</a>
-            <a href="#res">FreeCodeCamp - Responsive Web Design</a>
-            <a href="#cross">Crossover - Cognitive Aptitude</a>
-          </div>
+      <div class="dropdown-content">
+  <a href="#quals">McKinsey — Forward Program</a>
+  <a href="#coms">HubSpot — Content Marketing</a>
+  <a href="#inbound">HubSpot — Inbound Marketing</a>
+  <a href="#alan">Alan Sharpe — B2B Content Writing</a>
+  <a href="#res">Web Fundamentals</a>
+  <a href="#word">WordPress — CMS Management</a>
+  <!-- <a href="#cross">Crossover — Cognitive Aptitude</a>
+  <a href="#afm">Digiskills — Affiliate Marketing</a> -->
+</div>
         </div>
 
         <a class="nav-item" href="#social">Contact</a>
@@ -977,56 +988,62 @@
           <h2 class="section-title" id="quals">Certifications &amp; tools</h2>
           <p class="section-intro">Training across content marketing, inbound marketing, B2B writing, affiliate marketing, WordPress, responsive design, and problem-solving.</p>
         </div>
-        <div class="grid-4">
-          <article class="qualification-card">
-            <a href="https://app.hubspot.com/academy/achievements/nv38c1fy/en/1/azfar-saleem/content-marketing" target="_blank" rel="noopener">
-              <figure><img src="assets/img/Hubspot.png" alt="HubSpot Content Marketing" id="coms" /></figure>
-            </a>
-            <h4>HubSpot Academy - Content Marketing</h4>
-          </article>
-          <article class="qualification-card">
-            <a href="https://app.hubspot.com/academy/achievements/69870hcw/en/1/azfar-saleem/inbound-marketing" target="_blank" rel="noopener">
-              <figure><img src="assets/img/HubspotInboundMarketingCertificate.png" alt="HubSpot Inbound Marketing" id="inbound" /></figure>
-            </a>
-            <h4>HubSpot Academy - Inbound Marketing</h4>
-          </article>
-          <article class="qualification-card">
-            <a href="./B2B Content Writing Certification Alan Sharpe.pdf" target="_blank" rel="noopener">
-              <figure><img src="./alan.png" alt="Alan Sharpe B2B Content Writing Masterclass" id="alan" /></figure>
-            </a>
-            <h4>Alan Sharpe - B2B Content Writing Masterclass + ChatGPT Tips</h4>
-          </article>
-          <article class="qualification-card">
-            <a href="./aff.pdf" target="_blank" rel="noopener">
-              <figure><img src="assets/img/aff.png" alt="Digiskills Affiliate Marketing" id="afm" /></figure>
-            </a>
-            <h4>Digiskills - Affiliate Marketing</h4>
-          </article>
-          <article class="qualification-card">
-            <a href="./WordpressCertificateDigiskills.pdf" target="_blank" rel="noopener">
-              <figure><img src="assets/img/word.png" alt="Digiskills WordPress" id="word" /></figure>
-            </a>
-            <h4>Digiskills - WordPress Developer</h4>
-          </article>
-          <article class="qualification-card">
-            <a href="https://www.freecodecamp.org/certification/AzfarSaleem/responsive-web-design" target="_blank" rel="noopener">
-              <figure><img src="assets/img/fcc.png" alt="FreeCodeCamp Responsive Web Design" id="res" /></figure>
-            </a>
-            <h4>FreeCodeCamp - Responsive Web Design</h4>
-          </article>
-          <article class="qualification-card">
-            <a href="assets/img/CrossoverCognitiveAptitudeTest.png" target="_blank" rel="noopener">
-              <figure><img src="assets/img/CrossoverCognitiveAptitudeTest.png" alt="Crossover Cognitive Aptitude Test" id="cross" /></figure>
-            </a>
-            <h4>Crossover - Cognitive Aptitude Test</h4>
-          </article>
-          <article class="qualification-card">
-            <a href="https://www.credly.com/badges/8e0dbee3-7229-4bab-a833-94ce04a96025" target="_blank" rel="noopener">
-              <figure><img src="assets/img/mckinsey.png" alt="McKinsey Forward Program" /></figure>
-            </a>
-            <h4>McKinsey Academy - Forward Program</h4>
-          </article>
-        </div>
+       <div class="grid-4">
+  <article class="qualification-card">
+    <a href="https://www.credly.com/badges/8e0dbee3-7229-4bab-a833-94ce04a96025" target="_blank" rel="noopener">
+      <figure><img src="assets/img/mckinsey.png" alt="McKinsey Forward Program" /></figure>
+    </a>
+    <h4>McKinsey Academy — Forward Program</h4>
+    <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">Certified Problem Strategist adept at analytical thinking and professional skills.</p>
+  </article>
+  <article class="qualification-card">
+    <a href="https://app.hubspot.com/academy/achievements/nv38c1fy/en/1/azfar-saleem/content-marketing" target="_blank" rel="noopener">
+      <figure><img src="assets/img/Hubspot.png" alt="HubSpot Content Marketing" id="coms" /></figure>
+    </a>
+    <h4>HubSpot Academy — Certified Content Marketer</h4>
+    <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">Covers topic clusters, pillar pages, content gap analysis, buyer journeys, and performance measurement for B2B SaaS teams.</p>
+  </article>
+  <article class="qualification-card">
+    <a href="https://app.hubspot.com/academy/achievements/69870hcw/en/1/azfar-saleem/inbound-marketing" target="_blank" rel="noopener">
+      <figure><img src="assets/img/HubspotInboundMarketingCertificate.png" alt="HubSpot Inbound Marketing" id="inbound" /></figure>
+    </a>
+    <h4>HubSpot Academy — Inbound Marketing Certified</h4>
+    <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">Inbound methodology, lead nurturing, and content-driven funnel thinking — the standard framework across B2B SaaS marketing teams.</p>
+  </article>
+  <article class="qualification-card">
+    <a href="./B2B Content Writing Certification Alan Sharpe.pdf" target="_blank" rel="noopener">
+      <figure><img src="./alan.png" alt="Alan Sharpe B2B Content Writing Masterclass" id="alan" /></figure>
+    </a>
+    <h4>Alan Sharpe — B2B Content Writing Masterclass + ChatGPT Tips</h4>
+    <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">Specialist B2B copywriting training from a respected educator in the field — directly applicable to SaaS, fintech, and technology content.</p>
+  </article>
+  <article class="qualification-card">
+    <a href="https://www.freecodecamp.org/certification/AzfarSaleem/responsive-web-design" target="_blank" rel="noopener">
+      <figure><img src="assets/img/fcc.png" alt="FreeCodeCamp Responsive Web Design" id="res" /></figure>
+    </a>
+    <h4>Web Fundamentals — How Content Lives on the Page</h4>
+    <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">FreeCodeCamp Responsive Web Design. A content writer who understands HTML structure, CMS formatting, and screen-optimised layout is more useful than one who does not.</p>
+  </article>
+  <article class="qualification-card">
+    <a href="./WordpressCertificateDigiskills.pdf" target="_blank" rel="noopener">
+      <figure><img src="assets/img/word.png" alt="Digiskills WordPress" id="word" /></figure>
+    </a>
+    <h4>WordPress — Content Publishing &amp; CMS Management</h4>
+    <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">Digiskills certified. Able to publish directly into WordPress, format correctly for the web, and work within client CMS environments without hand-holding.</p>
+  </article>
+  <!-- <article class="qualification-card">
+    <a href="assets/img/CrossoverCognitiveAptitudeTest.png" target="_blank" rel="noopener">
+      <figure><img src="assets/img/CrossoverCognitiveAptitudeTest.png" alt="Crossover Cognitive Aptitude Test" id="cross" /></figure>
+    </a>
+    <h4>Crossover — Cognitive Aptitude Test: Verified Top Tier Writer</h4>
+  </article>
+  <article class="qualification-card">
+    <a href="./aff.pdf" target="_blank" rel="noopener">
+      <figure><img src="assets/img/aff.png" alt="Digiskills Affiliate Marketing" id="afm" /></figure>
+    </a>
+    <h4>Digiskills — Affiliate Marketing</h4>
+  </article> -->
+</div>
       </div>
     </section>
 
