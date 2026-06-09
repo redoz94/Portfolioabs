@@ -28,8 +28,639 @@
         --portfolio-accent: #2563eb;
         --portfolio-accent-dark: #1d4ed8;
         --portfolio-soft: #eef4ff;
+        --portfolio-teal: #0e7490;
+        --portfolio-teal-soft: #e1f5ee;
+        --portfolio-amber: #b45309;
+        --portfolio-amber-soft: #fef3c7;
+        --portfolio-green: #1a7f5a;
+        --portfolio-green-soft: #d1fae5;
+        --portfolio-purple: #6b21a8;
+        --portfolio-purple-soft: #f3e8ff;
       }
-
+:root {
+        --portfolio-bg: #f7f9fc;
+        --portfolio-dark: #111827;
+        --portfolio-text: #374151;
+        --portfolio-muted: #6b7280;
+        --portfolio-card: #ffffff;
+        --portfolio-border: #e5e7eb;
+        --portfolio-accent: #2563eb;
+        --portfolio-accent-dark: #1d4ed8;
+        --portfolio-soft: #eef4ff;
+        --portfolio-teal: #0e7490;
+        --portfolio-teal-soft: #e1f5ee;
+        --portfolio-amber: #b45309;
+        --portfolio-amber-soft: #fef3c7;
+        --portfolio-green: #1a7f5a;
+        --portfolio-green-soft: #d1fae5;
+        --portfolio-purple: #6b21a8;
+        --portfolio-purple-soft: #f3e8ff;
+      }
+ 
+      html { scroll-behavior: smooth; }
+ 
+      body {
+        background: var(--portfolio-bg);
+        color: var(--portfolio-text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.65;
+      }
+ 
+      a { color: var(--portfolio-accent); }
+ 
+      /* ── NAV ── */
+      .nav {
+        margin-top: 18px;
+        padding: 10px 18px;
+        border: 1px solid var(--portfolio-border);
+        background: rgba(255,255,255,0.96);
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        flex-wrap: wrap;
+      }
+ 
+      .nav-left { display: flex; align-items: center; gap: 0.5rem; }
+      .nav-right { display: flex; align-items: center; gap: 0.25rem; }
+ 
+      .nav a, .dropbtn { color: var(--portfolio-dark); font-weight: 600; }
+ 
+      .dropbtn { background: transparent; border: 0; padding: 10px 12px; cursor: pointer; }
+ 
+      .dropdown { position: relative; }
+ 
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: calc(100% + 6px);
+        right: 0;
+        background: #fff;
+        border: 1px solid var(--portfolio-border);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 16px 40px rgba(15,23,42,0.12);
+        z-index: 200;
+        min-width: 220px;
+      }
+ 
+      .dropdown:hover .dropdown-content,
+      .dropdown.open .dropdown-content { display: block; }
+ 
+      .dropdown-content a {
+        display: block; padding: 10px 16px;
+        color: var(--portfolio-dark); font-weight: 500; white-space: nowrap;
+      }
+ 
+      .dropdown-content a:hover { background: var(--portfolio-soft); }
+ 
+      .nav-hamburger {
+        display: none; flex-direction: column; justify-content: center;
+        gap: 5px; background: none; border: 1px solid var(--portfolio-border);
+        border-radius: 10px; padding: 8px 10px; cursor: pointer;
+        z-index: 300; margin-left: auto;
+      }
+ 
+      .nav-hamburger span {
+        display: block; width: 22px; height: 2px;
+        background: var(--portfolio-dark); border-radius: 2px;
+        transition: transform 0.25s, opacity 0.25s;
+      }
+ 
+      .nav-hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-hamburger.is-open span:nth-child(2) { opacity: 0; }
+      .nav-hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+ 
+      @media (max-width: 900px) {
+        .nav { border-radius: 0; margin-top: 0; position: sticky; top: 0; z-index: 100; }
+        .nav-hamburger { display: flex; }
+ 
+        .nav-right {
+          display: none; position: absolute; top: 100%; left: 0; right: 0;
+          background: rgba(255,255,255,0.98); border: 1px solid var(--portfolio-border);
+          border-top: none; border-radius: 0 0 16px 16px;
+          box-shadow: 0 16px 40px rgba(15,23,42,0.12);
+          flex-direction: column; align-items: flex-start;
+          width: 100%; gap: 0; padding: 0.5rem 0 0.75rem; z-index: 99;
+        }
+ 
+        .nav-right.is-open { display: flex; }
+ 
+        .nav-right .nav-item,
+        .nav-right .dropbtn { width: 100%; padding: 10px 14px; border-radius: 8px; font-size: 1rem; }
+ 
+        .nav-right .nav-item:hover,
+        .nav-right .dropbtn:hover { background: var(--portfolio-soft); }
+ 
+        .dropdown { width: 100%; }
+ 
+        .dropdown-content {
+          position: static; box-shadow: none; border: none;
+          background: var(--portfolio-soft); margin: 0 0 0.25rem 1rem;
+          border-radius: 8px; min-width: unset; width: calc(100% - 1rem);
+        }
+ 
+        .dropdown-content a { padding: 8px 14px; font-size: 0.95rem; }
+      }
+ 
+      /* ── LAYOUT ── */
+      .section { padding: 4rem 1.5rem; }
+      .section-heading { margin-bottom: 2rem; }
+ 
+      .eyebrow {
+        color: var(--portfolio-accent);
+        font-size: 0.82rem; font-weight: 800;
+        letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem;
+      }
+ 
+      .portfolio-title {
+        color: var(--portfolio-dark);
+        font-size: clamp(2.3rem,6vw,4.8rem);
+        font-weight: 900; line-height: 1.02;
+        letter-spacing: -0.06em; margin-bottom: 1rem;
+      }
+ 
+      .portfolio-subtitle {
+        color: var(--portfolio-text);
+        font-size: clamp(1.05rem,2vw,1.35rem);
+        max-width: 830px; margin: 0 auto 1.75rem;
+      }
+ 
+      /* ── HERO ── */
+      .hero-section {
+        padding-top: 4.5rem; padding-bottom: 3.5rem;
+        background:
+          radial-gradient(circle at top left, rgba(37,99,235,0.13), transparent 38%),
+          radial-gradient(circle at bottom right, rgba(14,165,233,0.1), transparent 34%),
+          var(--portfolio-bg);
+      }
+ 
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0,1.4fr) minmax(280px,0.6fr);
+        gap: 3rem; align-items: center;
+      }
+ 
+      .hero-copy { text-align: left; }
+      .hero-copy .portfolio-subtitle { margin-left: 0; }
+ 
+      .avatar-card {
+        background: var(--portfolio-card); border: 1px solid var(--portfolio-border);
+        border-radius: 28px; padding: 1.25rem;
+        box-shadow: 0 25px 60px rgba(15,23,42,0.12);
+      }
+ 
+      .avatar {
+        width: 100%; max-width: 360px; height: auto !important;
+        border-radius: 24px; display: block; margin: 0 auto; object-fit: cover;
+      }
+ 
+      /* ── EYEBROW LINE — new styling ── */
+      .hero-eyebrow-line {
+        display: flex; align-items: center; gap: 10px;
+        font-size: 0.82rem; font-weight: 800;
+        letter-spacing: 0.08em; text-transform: uppercase;
+        color: var(--portfolio-accent); margin-bottom: 1rem;
+      }
+ 
+      .hero-eyebrow-line::before {
+        content: ''; display: block; width: 28px; height: 2px;
+        background: var(--portfolio-accent); flex-shrink: 0;
+      }
+ 
+      /* ── TRUST BAR — new ── */
+      .trust-bar {
+        display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;
+        background: var(--portfolio-card); border: 1px solid var(--portfolio-border);
+        border-radius: 14px; padding: 10px 16px; margin-top: 1.25rem;
+      }
+ 
+      .trust-label {
+        font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+        letter-spacing: 0.08em; color: var(--portfolio-muted);
+      }
+ 
+      .trust-sep { color: var(--portfolio-border); font-size: 0.75rem; }
+ 
+      .trust-client {
+        font-size: 0.82rem; font-weight: 700; color: var(--portfolio-dark);
+      }
+ 
+      /* ── BADGES / PROOF BAR ── */
+      .hero-badges, .proof-bar, .tool-list, .tag-row {
+        display: flex; flex-wrap: wrap; gap: 0.75rem;
+      }
+ 
+      .hero-badges { margin: 1.25rem 0; }
+ 
+      .badge {
+        display: inline-flex; align-items: center; gap: 0.45rem;
+        padding: 0.55rem 0.8rem; background: var(--portfolio-card);
+        border: 1px solid var(--portfolio-border); border-radius: 999px;
+        color: var(--portfolio-dark); font-size: 0.92rem; font-weight: 700;
+      }
+ 
+      .proof-bar { margin-top: 1.5rem; }
+ 
+      .proof-item {
+        background: var(--portfolio-card); border: 1px solid var(--portfolio-border);
+        border-radius: 18px; padding: 1rem; min-width: 155px; flex: 1;
+        box-shadow: 0 10px 30px rgba(15,23,42,0.06);
+      }
+ 
+      .proof-item strong { display: block; color: var(--portfolio-dark); font-size: 1.4rem; line-height: 1.1; }
+      .proof-item span { color: var(--portfolio-muted); font-size: 0.9rem; }
+ 
+      .button-row { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 1.5rem; }
+ 
+      .portfolio-button {
+        display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+        border-radius: 999px; padding: 0.85rem 1.15rem; font-weight: 800;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+ 
+      .portfolio-button:hover { transform: translateY(-2px); }
+ 
+      .button-primary {
+        background: var(--portfolio-accent); color: #ffffff;
+        box-shadow: 0 14px 30px rgba(37,99,235,0.28);
+      }
+ 
+      .button-primary:hover { color: #ffffff; background: var(--portfolio-accent-dark); }
+ 
+      .button-secondary {
+        background: #ffffff; color: var(--portfolio-dark);
+        border: 1px solid var(--portfolio-border);
+      }
+ 
+      /* ── SECTION TITLES ── */
+      .section-title {
+        color: var(--portfolio-dark); font-size: clamp(1.9rem,4vw,3rem);
+        font-weight: 900; letter-spacing: -0.04em; margin-bottom: 0.75rem;
+      }
+ 
+      .section-intro { color: var(--portfolio-muted); max-width: 760px; margin: 0 auto; font-size: 1.05rem; }
+ 
+      /* ── GRIDS ── */
+      .grid-2, .grid-3, .grid-4 { display: grid; gap: 1.25rem; }
+      .grid-2 { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .grid-3 { grid-template-columns: repeat(3,minmax(0,1fr)); }
+      .grid-4 { grid-template-columns: repeat(4,minmax(0,1fr)); }
+ 
+      /* ── CARDS ── */
+      .portfolio-card, .case-card, .service-card, .sample-card, .qualification-card {
+        background: var(--portfolio-card); border: 1px solid var(--portfolio-border);
+        border-radius: 24px; box-shadow: 0 16px 42px rgba(15,23,42,0.07);
+      }
+ 
+      .portfolio-card { padding: 1.5rem; }
+      .best-fit-card { padding: 1.4rem; }
+      .best-fit-card i, .service-card i { color: var(--portfolio-accent); font-size: 1.35rem; margin-bottom: 0.7rem; }
+      .card-title { color: var(--portfolio-dark); font-size: 1.2rem; font-weight: 850; margin-bottom: 0.5rem; }
+      .card-copy { color: var(--portfolio-muted); font-size: 0.98rem; }
+      .case-card { overflow: visible; }
+ 
+      /* ── UPWORK HISTORY — new section ── */
+      .upwork-header {
+        display: flex; align-items: center; justify-content: space-between;
+        flex-wrap: wrap; gap: 12px; margin-bottom: 1.75rem;
+      }
+      .upwork-platform-badge {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: #14a800; color: #fff;
+        font-size: 0.8rem; font-weight: 700; padding: 6px 14px;
+        border-radius: 999px; letter-spacing: 0.03em;
+      }
+      .upwork-stats-row {
+        display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+        margin-bottom: 1.75rem;
+      }
+      .upwork-stat {
+        background: var(--portfolio-card); border: 1px solid var(--portfolio-border);
+        border-radius: 16px; padding: 1rem 1.1rem;
+        box-shadow: 0 8px 24px rgba(15,23,42,0.06); text-align: center;
+      }
+      .upwork-stat-num {
+        font-size: 1.6rem; font-weight: 900; color: var(--portfolio-dark);
+        line-height: 1.1; margin-bottom: 3px;
+      }
+      .upwork-stat-num .stars { color: #f59e0b; font-size: 1.2rem; }
+      .upwork-stat-label { font-size: 0.78rem; color: var(--portfolio-muted); line-height: 1.4; }
+      .upwork-jobs { display: flex; flex-direction: column; gap: 14px; }
+      .upwork-job {
+        background: var(--portfolio-card); border: 1px solid var(--portfolio-border);
+        border-radius: 20px; padding: 1.35rem 1.5rem;
+        box-shadow: 0 10px 28px rgba(15,23,42,0.06); transition: border-color 0.15s;
+      }
+      .upwork-job:hover { border-color: #14a800; }
+      .upwork-job-top {
+        display: flex; align-items: flex-start;
+        justify-content: space-between; gap: 12px;
+        margin-bottom: 8px; flex-wrap: wrap;
+      }
+      .upwork-job-title {
+        font-size: 1rem; font-weight: 800; color: var(--portfolio-dark);
+        flex: 1; min-width: 200px;
+      }
+      .upwork-job-meta {
+        display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+        margin-bottom: 10px;
+      }
+      .upwork-stars { color: #f59e0b; font-size: 0.9rem; letter-spacing: 1px; }
+      .upwork-score { font-size: 0.85rem; font-weight: 800; color: var(--portfolio-dark); }
+      .upwork-date {
+        font-size: 0.78rem; color: var(--portfolio-muted);
+        display: flex; align-items: center; gap: 5px;
+      }
+      .upwork-amount {
+        display: inline-flex; align-items: center; gap: 5px;
+        font-size: 0.75rem; font-weight: 700; padding: 3px 10px;
+        border-radius: 999px; background: var(--portfolio-green-soft);
+        color: var(--portfolio-green);
+      }
+      .upwork-review {
+        background: var(--portfolio-soft); border-radius: 12px;
+        padding: 10px 14px; margin: 10px 0;
+        border-left: 3px solid var(--portfolio-accent);
+      }
+      .upwork-review blockquote {
+        font-size: 0.92rem; font-style: italic;
+        color: var(--portfolio-dark); line-height: 1.65; margin: 0;
+      }
+      .upwork-insight-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+      .upwork-insight {
+        display: inline-flex; align-items: center; gap: 5px;
+        font-size: 0.74rem; font-weight: 700; padding: 4px 10px;
+        border-radius: 999px; background: var(--portfolio-soft);
+        color: var(--portfolio-accent-dark);
+      }
+      .upwork-no-review {
+        font-size: 0.82rem; color: var(--portfolio-muted);
+        font-style: italic; margin-top: 6px;
+      }
+      .upwork-skills { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+      .upwork-skill {
+        font-size: 0.74rem; font-weight: 600; padding: 3px 9px;
+        border-radius: 999px; border: 1px solid var(--portfolio-border);
+        color: var(--portfolio-text); background: var(--portfolio-bg);
+      }
+      @media (max-width: 768px) {
+        .upwork-stats-row { grid-template-columns: repeat(2, 1fr); }
+        .upwork-job-top { flex-direction: column; gap: 6px; }
+      }
+      @media (max-width: 420px) {
+        .upwork-stats-row { grid-template-columns: 1fr 1fr; }
+        .upwork-job { padding: 1rem; }
+      }
+ 
+      /* ── TESTIMONIALS — new section ── */
+      .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+ 
+      .testimonial-card {
+        background: var(--portfolio-card); border: 1px solid var(--portfolio-border);
+        border-radius: 20px; padding: 1.5rem;
+        box-shadow: 0 16px 42px rgba(15,23,42,0.07);
+        border-left: 4px solid var(--portfolio-accent);
+      }
+ 
+      .testimonial-card blockquote {
+        font-size: 1rem; line-height: 1.7; color: var(--portfolio-dark);
+        font-style: italic; margin-bottom: 1rem;
+      }
+ 
+      .testimonial-card cite {
+        font-size: 0.85rem; font-weight: 700; color: var(--portfolio-muted);
+        font-style: normal;
+      }
+ 
+      .testimonial-placeholder {
+        background: var(--portfolio-bg); border: 2px dashed var(--portfolio-border);
+        border-radius: 20px; padding: 1.5rem;
+        display: flex; flex-direction: column; justify-content: center;
+      }
+ 
+      .testimonial-placeholder p {
+        font-size: 0.9rem; color: var(--portfolio-muted); line-height: 1.6;
+      }
+ 
+      .testimonial-placeholder strong { color: var(--portfolio-dark); }
+ 
+      /* ── CASE CARDS ── */
+      .case-image {
+        background: var(--portfolio-soft); border-bottom: 1px solid var(--portfolio-border);
+        min-height: 185px; display: flex; align-items: center;
+        justify-content: center; padding: 1.2rem;
+        border-radius: 24px 24px 0 0;
+      }
+ 
+      .case-image img, .sample-card img {
+        max-width: 100%; max-height: 165px; object-fit: contain; border-radius: 14px;
+      }
+ 
+      .qualification-card img {
+        width: 100%; height: 120px; object-fit: contain;
+        border-radius: 14px; display: block;
+      }
+ 
+      .case-content { padding: 1.35rem; }
+ 
+      .case-label {
+        color: var(--portfolio-accent); font-size: 0.78rem;
+        font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase;
+      }
+ 
+      .case-content h3 { color: var(--portfolio-dark); font-size: 1.35rem; font-weight: 900; margin: 0.25rem 0 0.7rem; }
+      .case-list { margin-top: 1rem; color: var(--portfolio-text); }
+      .case-list p { margin-bottom: 0.55rem; }
+      .case-list strong { color: var(--portfolio-dark); }
+ 
+      /* result badge on case cards */
+      .result-badge {
+        display: inline-flex; align-items: center; gap: 5px;
+        font-size: 0.75rem; font-weight: 700; padding: 4px 10px;
+        border-radius: 999px; margin-top: 0.85rem;
+      }
+ 
+      .result-badge.green { background: var(--portfolio-green-soft); color: var(--portfolio-green); }
+      .result-badge.teal  { background: var(--portfolio-teal-soft);  color: var(--portfolio-teal);  }
+      .result-badge.amber { background: var(--portfolio-amber-soft); color: var(--portfolio-amber); }
+      .result-badge.purple{ background: var(--portfolio-purple-soft);color: var(--portfolio-purple);}
+ 
+      /* dashed case card for coming-soon */
+      .case-card.dashed {
+        border: 2px dashed var(--portfolio-border);
+        box-shadow: none;
+        background: var(--portfolio-bg);
+      }
+ 
+      /* ── BLOG / REGULAR WRITING — new section ── */
+      .blog-list {
+        border: 1px solid var(--portfolio-border); border-radius: 20px; overflow: hidden;
+        background: var(--portfolio-card);
+        box-shadow: 0 16px 42px rgba(15,23,42,0.07);
+      }
+ 
+      .blog-item {
+        display: flex; gap: 14px; align-items: flex-start;
+        padding: 1rem 1.35rem; border-bottom: 1px solid var(--portfolio-border);
+        transition: background 0.12s;
+      }
+ 
+      .blog-item:last-child { border-bottom: none; }
+      .blog-item:hover { background: var(--portfolio-soft); }
+ 
+      .blog-tag {
+        flex-shrink: 0; margin-top: 3px;
+        font-size: 0.7rem; font-weight: 800; padding: 3px 9px;
+        border-radius: 999px; white-space: nowrap;
+      }
+ 
+      .blog-tag.fintech { background: var(--portfolio-teal-soft); color: var(--portfolio-teal); }
+      .blog-tag.strategy { background: var(--portfolio-soft); color: var(--portfolio-accent-dark); }
+ 
+      .blog-title { font-size: 0.95rem; font-weight: 700; color: var(--portfolio-dark); margin-bottom: 2px; }
+      .blog-meta { font-size: 0.8rem; color: var(--portfolio-muted); }
+      .blog-meta a { color: var(--portfolio-accent); font-weight: 600; }
+ 
+      /* ── SERVICE CARD ── */
+      .service-card { padding: 1.35rem; }
+ 
+      /* ── SAMPLES ── */
+      .samples-wrapper { margin-top: 1.25rem; }
+      .category-heading { color: var(--portfolio-dark); font-size: 1.55rem; font-weight: 900; margin: 2.25rem 0 1rem; }
+      .sample-card { padding: 1.1rem; }
+ 
+      .sample-card figure {
+        min-height: 135px; display: flex; align-items: center; justify-content: center;
+        background: var(--portfolio-soft); border-radius: 18px; margin-bottom: 1rem; padding: 1rem;
+      }
+ 
+      .sample-card h4 { color: var(--portfolio-dark); font-size: 1.05rem; font-weight: 850; margin-bottom: 0.4rem; }
+      .sample-card p { color: var(--portfolio-muted); font-size: 0.94rem; }
+ 
+      .tag {
+        display: inline-block; background: var(--portfolio-soft);
+        color: var(--portfolio-accent-dark); border-radius: 999px;
+        padding: 0.28rem 0.6rem; font-size: 0.76rem; font-weight: 800; margin-bottom: 0.6rem;
+      }
+ 
+      /* ── QUALIFICATIONS ── */
+      .qualification-card { padding: 1rem; text-align: center; }
+ 
+      .qualification-card figure {
+        width: 100%; height: 130px; display: flex;
+        align-items: center; justify-content: center;
+        margin-bottom: 0.7rem; overflow: hidden;
+      }
+ 
+      .qualification-card h4 { color: var(--portfolio-dark); font-size: 0.95rem; font-weight: 800; }
+ 
+      /* ── ABOUT PANEL ── */
+      .about-panel {
+        background: var(--portfolio-dark); color: #e5e7eb;
+        border-radius: 28px; padding: 2rem;
+        box-shadow: 0 25px 70px rgba(15,23,42,0.18);
+      }
+ 
+      .about-panel h2, .about-panel h3 { color: #ffffff; }
+      .about-panel p { color: #d1d5db; }
+ 
+      .about-panel .badge {
+        background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.16); color: #ffffff;
+      }
+ 
+      /* ── CTA ── */
+      .cta-section {
+        background:
+          radial-gradient(circle at top right, rgba(37,99,235,0.2), transparent 34%),
+          var(--portfolio-dark);
+        color: #ffffff;
+      }
+ 
+      .cta-card { text-align: center; max-width: 850px; margin: 0 auto; }
+      .cta-card .section-title, .cta-card .section-intro { color: #ffffff; }
+      .cta-card .section-intro { opacity: 0.86; }
+ 
+      /* ── FOOTER ── */
+      .social-container img { max-height: 90px; object-fit: contain; }
+      .footer-contact { padding: 1.6rem; color: var(--portfolio-muted); }
+      .footer-contact a { font-weight: 800; }
+      .footer-updated { font-size: 0.8rem; color: var(--portfolio-muted); margin-top: 0.25rem; }
+ 
+      /* ── GLOBAL RESPONSIVE ── */
+      *, *::before, *::after { box-sizing: border-box; }
+      html, body { width: 100%; max-width: 100%; overflow-x: hidden; margin: 0; padding: 0; }
+      img, video, iframe, figure { max-width: 100%; height: auto; display: block; }
+ 
+      h1,h2,h3,h4,h5,h6,p,a,span,div,button {
+        overflow-wrap: break-word; word-wrap: break-word; word-break: break-word;
+      }
+ 
+      .container, .section, .hero-section, .hero-grid, .grid-2, .grid-3, .grid-4,
+      .case-card, .sample-card, .service-card, .portfolio-card, .about-panel, .cta-card, .nav {
+        width: 100%; max-width: 100%;
+      }
+ 
+      .case-card, .sample-card, .portfolio-card, .service-card, .about-panel, .avatar-card { overflow: visible; }
+ 
+      .grid-2, .grid-3, .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+        gap: 1.25rem;
+      }
+ 
+      .hero-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+        align-items: center;
+      }
+ 
+      .button-row { display: flex; flex-wrap: wrap; gap: 1rem; }
+      .portfolio-button { max-width: 100%; white-space: normal; text-align: center; }
+ 
+      @media (max-width: 768px) {
+        .section { padding: 3rem 1rem; }
+        .portfolio-title { font-size: 2.2rem; line-height: 1.1; }
+        .portfolio-subtitle { font-size: 1rem; }
+        .proof-bar { flex-direction: column; }
+        .proof-item { width: 100%; }
+        .button-row { flex-direction: column; }
+        .portfolio-button { width: 100%; }
+        .avatar { max-width: 100%; }
+        .footer-contact { padding: 1rem; }
+        .hero-copy { text-align: center; }
+        .hero-copy .portfolio-subtitle { margin-left: auto; }
+        .hero-badges, .button-row, .proof-bar { justify-content: center; }
+        .hero-eyebrow-line { justify-content: center; }
+        .hero-eyebrow-line::before { display: none; }
+        .trust-bar { justify-content: center; }
+        .testimonial-grid { grid-template-columns: 1fr; }
+        .blog-item { flex-direction: column; gap: 6px; }
+        .blog-tag { align-self: flex-start; }
+ 
+        .section-heading {
+          display: flex; flex-direction: column;
+          align-items: center; text-align: center; width: 100%;
+        }
+ 
+        .section-title {
+          font-size: 1.6rem; text-align: center;
+          word-break: normal; overflow-wrap: normal;
+          white-space: normal; width: 100%;
+        }
+ 
+        .eyebrow { text-align: center; display: block; word-break: normal; }
+        .section-intro { text-align: center; word-break: normal; }
+      }
+ 
+      @media (max-width: 480px) {
+        .trust-bar { flex-direction: column; align-items: flex-start; }
+        .blog-list { border-radius: 14px; }
+        .blog-item { padding: 0.85rem 1rem; }
+        .testimonial-card, .testimonial-placeholder { padding: 1.1rem; }
+      }
       html { scroll-behavior: smooth; }
 
       body {
@@ -56,29 +687,12 @@
         flex-wrap: wrap;
       }
 
-      .nav-left {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
+      .nav-left { display: flex; align-items: center; gap: 0.5rem; }
+      .nav-right { display: flex; align-items: center; gap: 0.25rem; }
 
-      .nav-right {
-        display: flex;
-        align-items: center;
-        gap: 0.25rem;
-      }
+      .nav a, .dropbtn { color: var(--portfolio-dark); font-weight: 600; }
 
-      .nav a, .dropbtn {
-        color: var(--portfolio-dark);
-        font-weight: 600;
-      }
-
-      .dropbtn {
-        background: transparent;
-        border: 0;
-        padding: 10px 12px;
-        cursor: pointer;
-      }
+      .dropbtn { background: transparent; border: 0; padding: 10px 12px; cursor: pointer; }
 
       .dropdown { position: relative; }
 
@@ -100,137 +714,87 @@
       .dropdown.open .dropdown-content { display: block; }
 
       .dropdown-content a {
-        display: block;
-        padding: 10px 16px;
-        color: var(--portfolio-dark);
-        font-weight: 500;
-        white-space: nowrap;
+        display: block; padding: 10px 16px;
+        color: var(--portfolio-dark); font-weight: 500; white-space: nowrap;
       }
 
       .dropdown-content a:hover { background: var(--portfolio-soft); }
 
-      /* ── HAMBURGER BUTTON (hidden on desktop) ── */
       .nav-hamburger {
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        gap: 5px;
-        background: none;
-        border: 1px solid var(--portfolio-border);
-        border-radius: 10px;
-        padding: 8px 10px;
-        cursor: pointer;
-        z-index: 300;
-        margin-left: auto; /* pushes it to the right */
+        display: none; flex-direction: column; justify-content: center;
+        gap: 5px; background: none; border: 1px solid var(--portfolio-border);
+        border-radius: 10px; padding: 8px 10px; cursor: pointer;
+        z-index: 300; margin-left: auto;
       }
 
       .nav-hamburger span {
-        display: block;
-        width: 22px;
-        height: 2px;
-        background: var(--portfolio-dark);
-        border-radius: 2px;
+        display: block; width: 22px; height: 2px;
+        background: var(--portfolio-dark); border-radius: 2px;
         transition: transform 0.25s, opacity 0.25s;
       }
 
-      /* Animated X when open */
       .nav-hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
       .nav-hamburger.is-open span:nth-child(2) { opacity: 0; }
       .nav-hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-      /* ── MOBILE STYLES ── */
-    @media (max-width: 900px) {
-  .nav {
-    border-radius: 0;
-    margin-top: 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
+      @media (max-width: 900px) {
+        .nav { border-radius: 0; margin-top: 0; position: sticky; top: 0; z-index: 100; }
+        .nav-hamburger { display: flex; }
 
-  .nav-hamburger { display: flex; }
+        .nav-right {
+          display: none; position: absolute; top: 100%; left: 0; right: 0;
+          background: rgba(255,255,255,0.98); border: 1px solid var(--portfolio-border);
+          border-top: none; border-radius: 0 0 16px 16px;
+          box-shadow: 0 16px 40px rgba(15,23,42,0.12);
+          flex-direction: column; align-items: flex-start;
+          width: 100%; gap: 0; padding: 0.5rem 0 0.75rem; z-index: 99;
+        }
 
-  /* Menu floats over page content via absolute positioning */
-  .nav-right {
-    display: none;
-    position: absolute;
-    top: 100%;          /* sits flush below the nav bar */
-    left: 0;
-    right: 0;
-    background: rgba(255,255,255,0.98);
-    border: 1px solid var(--portfolio-border);
-    border-top: none;
-    border-radius: 0 0 16px 16px;
-    box-shadow: 0 16px 40px rgba(15,23,42,0.12);
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    gap: 0;
-    padding: 0.5rem 0 0.75rem;
-    z-index: 99;        /* below nav bar, above page content */
-  }
+        .nav-right.is-open { display: flex; }
 
-  .nav-right.is-open { display: flex; }
+        .nav-right .nav-item,
+        .nav-right .dropbtn { width: 100%; padding: 10px 14px; border-radius: 8px; font-size: 1rem; }
 
-  .nav-right .nav-item,
-  .nav-right .dropbtn {
-    width: 100%;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-size: 1rem;
-  }
+        .nav-right .nav-item:hover,
+        .nav-right .dropbtn:hover { background: var(--portfolio-soft); }
 
-  .nav-right .nav-item:hover,
-  .nav-right .dropbtn:hover { background: var(--portfolio-soft); }
+        .dropdown { width: 100%; }
 
-  .dropdown { width: 100%; }
+        .dropdown-content {
+          position: static; box-shadow: none; border: none;
+          background: var(--portfolio-soft); margin: 0 0 0.25rem 1rem;
+          border-radius: 8px; min-width: unset; width: calc(100% - 1rem);
+        }
 
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-    border: none;
-    background: var(--portfolio-soft);
-    margin: 0 0 0.25rem 1rem;
-    border-radius: 8px;
-    min-width: unset;
-    width: calc(100% - 1rem);
-  }
+        .dropdown-content a { padding: 8px 14px; font-size: 0.95rem; }
+      }
 
-  .dropdown-content a { padding: 8px 14px; font-size: 0.95rem; }
-}
-
-      /* ── ALL EXISTING STYLES BELOW (unchanged) ── */
+      /* ── LAYOUT ── */
       .section { padding: 4rem 1.5rem; }
       .section-heading { margin-bottom: 2rem; }
 
       .eyebrow {
         color: var(--portfolio-accent);
-        font-size: 0.82rem;
-        font-weight: 800;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        margin-bottom: 0.75rem;
+        font-size: 0.82rem; font-weight: 800;
+        letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem;
       }
 
       .portfolio-title {
         color: var(--portfolio-dark);
         font-size: clamp(2.3rem,6vw,4.8rem);
-        font-weight: 900;
-        line-height: 1.02;
-        letter-spacing: -0.06em;
-        margin-bottom: 1rem;
+        font-weight: 900; line-height: 1.02;
+        letter-spacing: -0.06em; margin-bottom: 1rem;
       }
 
       .portfolio-subtitle {
         color: var(--portfolio-text);
         font-size: clamp(1.05rem,2vw,1.35rem);
-        max-width: 830px;
-        margin: 0 auto 1.75rem;
+        max-width: 830px; margin: 0 auto 1.75rem;
       }
 
+      /* ── HERO ── */
       .hero-section {
-        padding-top: 4.5rem;
-        padding-bottom: 3.5rem;
+        padding-top: 4.5rem; padding-bottom: 3.5rem;
         background:
           radial-gradient(circle at top left, rgba(37,99,235,0.13), transparent 38%),
           radial-gradient(circle at bottom right, rgba(14,165,233,0.1), transparent 34%),
@@ -240,132 +804,119 @@
       .hero-grid {
         display: grid;
         grid-template-columns: minmax(0,1.4fr) minmax(280px,0.6fr);
-        gap: 3rem;
-        align-items: center;
+        gap: 3rem; align-items: center;
       }
 
       .hero-copy { text-align: left; }
       .hero-copy .portfolio-subtitle { margin-left: 0; }
 
       .avatar-card {
-        background: var(--portfolio-card);
-        border: 1px solid var(--portfolio-border);
-        border-radius: 28px;
-        padding: 1.25rem;
+        background: var(--portfolio-card); border: 1px solid var(--portfolio-border);
+        border-radius: 28px; padding: 1.25rem;
         box-shadow: 0 25px 60px rgba(15,23,42,0.12);
       }
 
       .avatar {
-        width: 100%;
-        max-width: 360px;
-        height: auto !important;
-        border-radius: 24px;
-        display: block;
-        margin: 0 auto;
-        object-fit: cover;
+        width: 100%; max-width: 360px; height: auto !important;
+        border-radius: 24px; display: block; margin: 0 auto; object-fit: cover;
       }
 
+      /* ── EYEBROW LINE — new styling ── */
+      .hero-eyebrow-line {
+        display: flex; align-items: center; gap: 10px;
+        font-size: 0.82rem; font-weight: 800;
+        letter-spacing: 0.08em; text-transform: uppercase;
+        color: var(--portfolio-accent); margin-bottom: 1rem;
+      }
+
+      .hero-eyebrow-line::before {
+        content: ''; display: block; width: 28px; height: 2px;
+        background: var(--portfolio-accent); flex-shrink: 0;
+      }
+
+      /* ── TRUST BAR — new ── */
+      .trust-bar {
+        display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;
+        background: var(--portfolio-card); border: 1px solid var(--portfolio-border);
+        border-radius: 14px; padding: 10px 16px; margin-top: 1.25rem;
+      }
+
+      .trust-label {
+        font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+        letter-spacing: 0.08em; color: var(--portfolio-muted);
+      }
+
+      .trust-sep { color: var(--portfolio-border); font-size: 0.75rem; }
+
+      .trust-client {
+        font-size: 0.82rem; font-weight: 700; color: var(--portfolio-dark);
+      }
+
+      /* ── BADGES / PROOF BAR ── */
       .hero-badges, .proof-bar, .tool-list, .tag-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
+        display: flex; flex-wrap: wrap; gap: 0.75rem;
       }
 
-      .hero-badges { margin: 1.5rem 0; }
+      .hero-badges { margin: 1.25rem 0; }
 
       .badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        padding: 0.55rem 0.8rem;
-        background: var(--portfolio-card);
-        border: 1px solid var(--portfolio-border);
-        border-radius: 999px;
-        color: var(--portfolio-dark);
-        font-size: 0.92rem;
-        font-weight: 700;
+        display: inline-flex; align-items: center; gap: 0.45rem;
+        padding: 0.55rem 0.8rem; background: var(--portfolio-card);
+        border: 1px solid var(--portfolio-border); border-radius: 999px;
+        color: var(--portfolio-dark); font-size: 0.92rem; font-weight: 700;
       }
 
       .proof-bar { margin-top: 1.5rem; }
 
       .proof-item {
-        background: var(--portfolio-card);
-        border: 1px solid var(--portfolio-border);
-        border-radius: 18px;
-        padding: 1rem;
-        min-width: 155px;
-        flex: 1;
+        background: var(--portfolio-card); border: 1px solid var(--portfolio-border);
+        border-radius: 18px; padding: 1rem; min-width: 155px; flex: 1;
         box-shadow: 0 10px 30px rgba(15,23,42,0.06);
       }
 
-      .proof-item strong {
-        display: block;
-        color: var(--portfolio-dark);
-        font-size: 1.4rem;
-        line-height: 1.1;
-      }
-
+      .proof-item strong { display: block; color: var(--portfolio-dark); font-size: 1.4rem; line-height: 1.1; }
       .proof-item span { color: var(--portfolio-muted); font-size: 0.9rem; }
 
-      .button-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.85rem;
-        margin-top: 1.5rem;
-      }
+      .button-row { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 1.5rem; }
 
       .portfolio-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        border-radius: 999px;
-        padding: 0.85rem 1.15rem;
-        font-weight: 800;
+        display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+        border-radius: 999px; padding: 0.85rem 1.15rem; font-weight: 800;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
 
       .portfolio-button:hover { transform: translateY(-2px); }
 
       .button-primary {
-        background: var(--portfolio-accent);
-        color: #ffffff;
+        background: var(--portfolio-accent); color: #ffffff;
         box-shadow: 0 14px 30px rgba(37,99,235,0.28);
       }
 
       .button-primary:hover { color: #ffffff; background: var(--portfolio-accent-dark); }
 
       .button-secondary {
-        background: #ffffff;
-        color: var(--portfolio-dark);
+        background: #ffffff; color: var(--portfolio-dark);
         border: 1px solid var(--portfolio-border);
       }
 
+      /* ── SECTION TITLES ── */
       .section-title {
-        color: var(--portfolio-dark);
-        font-size: clamp(1.9rem,4vw,3rem);
-        font-weight: 900;
-        letter-spacing: -0.04em;
-        margin-bottom: 0.75rem;
+        color: var(--portfolio-dark); font-size: clamp(1.9rem,4vw,3rem);
+        font-weight: 900; letter-spacing: -0.04em; margin-bottom: 0.75rem;
       }
 
-      .section-intro {
-        color: var(--portfolio-muted);
-        max-width: 760px;
-        margin: 0 auto;
-        font-size: 1.05rem;
-      }
+      .section-intro { color: var(--portfolio-muted); max-width: 760px; margin: 0 auto; font-size: 1.05rem; }
 
+      /* ── GRIDS ── */
       .grid-2, .grid-3, .grid-4 { display: grid; gap: 1.25rem; }
       .grid-2 { grid-template-columns: repeat(2,minmax(0,1fr)); }
       .grid-3 { grid-template-columns: repeat(3,minmax(0,1fr)); }
       .grid-4 { grid-template-columns: repeat(4,minmax(0,1fr)); }
 
+      /* ── CARDS ── */
       .portfolio-card, .case-card, .service-card, .sample-card, .qualification-card {
-        background: var(--portfolio-card);
-        border: 1px solid var(--portfolio-border);
-        border-radius: 24px;
-        box-shadow: 0 16px 42px rgba(15,23,42,0.07);
+        background: var(--portfolio-card); border: 1px solid var(--portfolio-border);
+        border-radius: 24px; box-shadow: 0 16px 42px rgba(15,23,42,0.07);
       }
 
       .portfolio-card { padding: 1.5rem; }
@@ -375,94 +926,152 @@
       .card-copy { color: var(--portfolio-muted); font-size: 0.98rem; }
       .case-card { overflow: visible; }
 
-      .case-image {
-        background: var(--portfolio-soft);
-        border-bottom: 1px solid var(--portfolio-border);
-        min-height: 185px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1.2rem;
+      /* ── TESTIMONIALS — new section ── */
+      .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+
+      .testimonial-card {
+        background: var(--portfolio-card); border: 1px solid var(--portfolio-border);
+        border-radius: 20px; padding: 1.5rem;
+        box-shadow: 0 16px 42px rgba(15,23,42,0.07);
+        border-left: 4px solid var(--portfolio-accent);
       }
 
- .case-image img, .sample-card img {
-  max-width: 100%;
-  max-height: 165px;
-  object-fit: contain;
-  border-radius: 14px;
-}
+      .testimonial-card blockquote {
+        font-size: 1rem; line-height: 1.7; color: var(--portfolio-dark);
+        font-style: italic; margin-bottom: 1rem;
+      }
 
-.qualification-card img {
-  width: 100%;
-  height: 120px;
-  object-fit: contain;
-  border-radius: 14px;
-  display: block;
-}
+      .testimonial-card cite {
+        font-size: 0.85rem; font-weight: 700; color: var(--portfolio-muted);
+        font-style: normal;
+      }
+
+      .testimonial-placeholder {
+        background: var(--portfolio-bg); border: 2px dashed var(--portfolio-border);
+        border-radius: 20px; padding: 1.5rem;
+        display: flex; flex-direction: column; justify-content: center;
+      }
+
+      .testimonial-placeholder p {
+        font-size: 0.9rem; color: var(--portfolio-muted); line-height: 1.6;
+      }
+
+      .testimonial-placeholder strong { color: var(--portfolio-dark); }
+
+      /* ── CASE CARDS ── */
+      .case-image {
+        background: var(--portfolio-soft); border-bottom: 1px solid var(--portfolio-border);
+        min-height: 185px; display: flex; align-items: center;
+        justify-content: center; padding: 1.2rem;
+        border-radius: 24px 24px 0 0;
+      }
+
+      .case-image img, .sample-card img {
+        max-width: 100%; max-height: 165px; object-fit: contain; border-radius: 14px;
+      }
+
+      .qualification-card img {
+        width: 100%; height: 120px; object-fit: contain;
+        border-radius: 14px; display: block;
+      }
 
       .case-content { padding: 1.35rem; }
 
       .case-label {
-        color: var(--portfolio-accent);
-        font-size: 0.78rem;
-        font-weight: 900;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
+        color: var(--portfolio-accent); font-size: 0.78rem;
+        font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase;
       }
 
       .case-content h3 { color: var(--portfolio-dark); font-size: 1.35rem; font-weight: 900; margin: 0.25rem 0 0.7rem; }
       .case-list { margin-top: 1rem; color: var(--portfolio-text); }
       .case-list p { margin-bottom: 0.55rem; }
       .case-list strong { color: var(--portfolio-dark); }
+
+      /* result badge on case cards */
+      .result-badge {
+        display: inline-flex; align-items: center; gap: 5px;
+        font-size: 0.75rem; font-weight: 700; padding: 4px 10px;
+        border-radius: 999px; margin-top: 0.85rem;
+      }
+
+      .result-badge.green { background: var(--portfolio-green-soft); color: var(--portfolio-green); }
+      .result-badge.teal  { background: var(--portfolio-teal-soft);  color: var(--portfolio-teal);  }
+      .result-badge.amber { background: var(--portfolio-amber-soft); color: var(--portfolio-amber); }
+      .result-badge.purple{ background: var(--portfolio-purple-soft);color: var(--portfolio-purple);}
+
+      /* dashed case card for coming-soon */
+      .case-card.dashed {
+        border: 2px dashed var(--portfolio-border);
+        box-shadow: none;
+        background: var(--portfolio-bg);
+      }
+
+      /* ── BLOG / REGULAR WRITING — new section ── */
+      .blog-list {
+        border: 1px solid var(--portfolio-border); border-radius: 20px; overflow: hidden;
+        background: var(--portfolio-card);
+        box-shadow: 0 16px 42px rgba(15,23,42,0.07);
+      }
+
+      .blog-item {
+        display: flex; gap: 14px; align-items: flex-start;
+        padding: 1rem 1.35rem; border-bottom: 1px solid var(--portfolio-border);
+        transition: background 0.12s;
+      }
+
+      .blog-item:last-child { border-bottom: none; }
+      .blog-item:hover { background: var(--portfolio-soft); }
+
+      .blog-tag {
+        flex-shrink: 0; margin-top: 3px;
+        font-size: 0.7rem; font-weight: 800; padding: 3px 9px;
+        border-radius: 999px; white-space: nowrap;
+      }
+
+      .blog-tag.fintech { background: var(--portfolio-teal-soft); color: var(--portfolio-teal); }
+      .blog-tag.strategy { background: var(--portfolio-soft); color: var(--portfolio-accent-dark); }
+
+      .blog-title { font-size: 0.95rem; font-weight: 700; color: var(--portfolio-dark); margin-bottom: 2px; }
+      .blog-meta { font-size: 0.8rem; color: var(--portfolio-muted); }
+      .blog-meta a { color: var(--portfolio-accent); font-weight: 600; }
+
+      /* ── SERVICE CARD ── */
       .service-card { padding: 1.35rem; }
+
+      /* ── SAMPLES ── */
       .samples-wrapper { margin-top: 1.25rem; }
       .category-heading { color: var(--portfolio-dark); font-size: 1.55rem; font-weight: 900; margin: 2.25rem 0 1rem; }
       .sample-card { padding: 1.1rem; }
 
       .sample-card figure {
-        min-height: 135px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--portfolio-soft);
-        border-radius: 18px;
-        margin-bottom: 1rem;
-        padding: 1rem;
+        min-height: 135px; display: flex; align-items: center; justify-content: center;
+        background: var(--portfolio-soft); border-radius: 18px; margin-bottom: 1rem; padding: 1rem;
       }
 
       .sample-card h4 { color: var(--portfolio-dark); font-size: 1.05rem; font-weight: 850; margin-bottom: 0.4rem; }
       .sample-card p { color: var(--portfolio-muted); font-size: 0.94rem; }
 
       .tag {
-        display: inline-block;
-        background: var(--portfolio-soft);
-        color: var(--portfolio-accent-dark);
-        border-radius: 999px;
-        padding: 0.28rem 0.6rem;
-        font-size: 0.76rem;
-        font-weight: 800;
-        margin-bottom: 0.6rem;
+        display: inline-block; background: var(--portfolio-soft);
+        color: var(--portfolio-accent-dark); border-radius: 999px;
+        padding: 0.28rem 0.6rem; font-size: 0.76rem; font-weight: 800; margin-bottom: 0.6rem;
       }
 
+      /* ── QUALIFICATIONS ── */
       .qualification-card { padding: 1rem; text-align: center; }
 
-     .qualification-card figure {
-  width: 100%;
-  height: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.7rem;
-  overflow: hidden;
-}
+      .qualification-card figure {
+        width: 100%; height: 130px; display: flex;
+        align-items: center; justify-content: center;
+        margin-bottom: 0.7rem; overflow: hidden;
+      }
 
       .qualification-card h4 { color: var(--portfolio-dark); font-size: 0.95rem; font-weight: 800; }
 
+      /* ── ABOUT PANEL ── */
       .about-panel {
-        background: var(--portfolio-dark);
-        color: #e5e7eb;
-        border-radius: 28px;
-        padding: 2rem;
+        background: var(--portfolio-dark); color: #e5e7eb;
+        border-radius: 28px; padding: 2rem;
         box-shadow: 0 25px 70px rgba(15,23,42,0.18);
       }
 
@@ -470,11 +1079,10 @@
       .about-panel p { color: #d1d5db; }
 
       .about-panel .badge {
-        background: rgba(255,255,255,0.08);
-        border-color: rgba(255,255,255,0.16);
-        color: #ffffff;
+        background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.16); color: #ffffff;
       }
 
+      /* ── CTA ── */
       .cta-section {
         background:
           radial-gradient(circle at top right, rgba(37,99,235,0.2), transparent 34%),
@@ -485,9 +1093,12 @@
       .cta-card { text-align: center; max-width: 850px; margin: 0 auto; }
       .cta-card .section-title, .cta-card .section-intro { color: #ffffff; }
       .cta-card .section-intro { opacity: 0.86; }
+
+      /* ── FOOTER ── */
       .social-container img { max-height: 90px; object-fit: contain; }
       .footer-contact { padding: 1.6rem; color: var(--portfolio-muted); }
       .footer-contact a { font-weight: 800; }
+      .footer-updated { font-size: 0.8rem; color: var(--portfolio-muted); margin-top: 0.25rem; }
 
       /* ── GLOBAL RESPONSIVE ── */
       *, *::before, *::after { box-sizing: border-box; }
@@ -495,15 +1106,12 @@
       img, video, iframe, figure { max-width: 100%; height: auto; display: block; }
 
       h1,h2,h3,h4,h5,h6,p,a,span,div,button {
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-        word-break: break-word;
+        overflow-wrap: break-word; word-wrap: break-word; word-break: break-word;
       }
 
       .container, .section, .hero-section, .hero-grid, .grid-2, .grid-3, .grid-4,
       .case-card, .sample-card, .service-card, .portfolio-card, .about-panel, .cta-card, .nav {
-        width: 100%;
-        max-width: 100%;
+        width: 100%; max-width: 100%;
       }
 
       .case-card, .sample-card, .portfolio-card, .service-card, .about-panel, .avatar-card { overflow: visible; }
@@ -523,58 +1131,47 @@
       .button-row { display: flex; flex-wrap: wrap; gap: 1rem; }
       .portfolio-button { max-width: 100%; white-space: normal; text-align: center; }
 
-    @media (max-width: 768px) {
-  .section { padding: 3rem 1rem; }
-  .portfolio-title { font-size: 2.2rem; line-height: 1.1; }
-  .portfolio-subtitle { font-size: 1rem; }
-  .proof-bar { flex-direction: column; }
-  .proof-item { width: 100%; }
-  .button-row { flex-direction: column; }
-  .portfolio-button { width: 100%; }
-  .avatar { max-width: 100%; }
-  .footer-contact { padding: 1rem; }
-  .hero-copy { text-align: center; }
-  .hero-copy .portfolio-subtitle { margin-left: auto; }
-  .hero-badges, .button-row, .proof-bar { justify-content: center; }
+      @media (max-width: 768px) {
+        .section { padding: 3rem 1rem; }
+        .portfolio-title { font-size: 2.2rem; line-height: 1.1; }
+        .portfolio-subtitle { font-size: 1rem; }
+        .proof-bar { flex-direction: column; }
+        .proof-item { width: 100%; }
+        .button-row { flex-direction: column; }
+        .portfolio-button { width: 100%; }
+        .avatar { max-width: 100%; }
+        .footer-contact { padding: 1rem; }
+        .hero-copy { text-align: center; }
+        .hero-copy .portfolio-subtitle { margin-left: auto; }
+        .hero-badges, .button-row, .proof-bar { justify-content: center; }
+        .hero-eyebrow-line { justify-content: center; }
+        .hero-eyebrow-line::before { display: none; }
+        .trust-bar { justify-content: center; }
+        .testimonial-grid { grid-template-columns: 1fr; }
+        .blog-item { flex-direction: column; gap: 6px; }
+        .blog-tag { align-self: flex-start; }
 
-  /* ← add these two */
-  .section-title {
-    font-size: 1.6rem;
-    text-align: center;
-  }
+        .section-heading {
+          display: flex; flex-direction: column;
+          align-items: center; text-align: center; width: 100%;
+        }
 
-  .eyebrow {
-    text-align: center;
-    display: block;
-  }
-  section-heading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-}
+        .section-title {
+          font-size: 1.6rem; text-align: center;
+          word-break: normal; overflow-wrap: normal;
+          white-space: normal; width: 100%;
+        }
 
-.section-title {
-  font-size: 1.6rem;
-  text-align: center;
-  word-break: normal;
-  overflow-wrap: normal;
-  white-space: normal;
-  width: 100%;
-}
+        .eyebrow { text-align: center; display: block; word-break: normal; }
+        .section-intro { text-align: center; word-break: normal; }
+      }
 
-.eyebrow {
-  text-align: center;
-  display: block;
-  word-break: normal;
-}
-
-.section-intro {
-  text-align: center;
-  word-break: normal;
-}
-}
+      @media (max-width: 480px) {
+        .trust-bar { flex-direction: column; align-items: flex-start; }
+        .blog-list { border-radius: 14px; }
+        .blog-item { padding: 0.85rem 1rem; }
+        .testimonial-card, .testimonial-placeholder { padding: 1.1rem; }
+      }
     </style>
   </head>
 
@@ -596,18 +1193,15 @@
         </a>
       </div>
 
-      <!-- Hamburger: top-right, mobile only -->
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
 
       <div class="nav-right nav-menu" id="nav-menu">
         <a class="nav-item" href="#about">About</a>
         <a class="nav-item" href="#featured">Case Studies</a>
         <a class="nav-item" href="#services">Services</a>
-        <a class="nav-item" href="./ABSCV.pdf" target="_blank" rel="noopener">Resumé</a>
+        <a class="nav-item" href="./ABSCV.pdf" target="_blank" rel="noopener">Résumé</a>
 
         <div class="dropdown" style="cursor:pointer">
           <button class="dropbtn" style="cursor:pointer;">
@@ -617,7 +1211,6 @@
             <a href="#vid">SaaS &amp; Video Technology</a>
             <a href="#fin">Fintech</a>
             <a href="#travel">Travel</a>
-            <a href="#ant">Research Essays</a>
           </div>
         </div>
 
@@ -625,108 +1218,238 @@
           <button class="dropbtn">
             Qualifications <i class="fa fa-caret-down"></i>
           </button>
-      <div class="dropdown-content">
-  <a href="#quals">McKinsey — Forward Program</a>
-  <a href="#coms">HubSpot — Content Marketing</a>
-  <a href="#inbound">HubSpot — Inbound Marketing</a>
-  <a href="#alan">Alan Sharpe — B2B Content Writing</a>
-  <a href="#res">Web Fundamentals</a>
-  <a href="#word">WordPress — CMS Management</a>
-  <!-- <a href="#cross">Crossover — Cognitive Aptitude</a>
-  <a href="#afm">Digiskills — Affiliate Marketing</a> -->
-</div>
+          <div class="dropdown-content">
+            <a href="#quals">McKinsey — Forward Program</a>
+            <a href="#coms">HubSpot — Content Marketing</a>
+            <a href="#inbound">HubSpot — Inbound Marketing</a>
+            <a href="#alan">Alan Sharpe — B2B Content Writing</a>
+            <a href="#res">Web Fundamentals</a>
+            <a href="#word">WordPress — CMS Management</a>
+          </div>
         </div>
 
         <a class="nav-item" href="#social">Contact</a>
       </div>
     </nav>
 
-    <!-- Hero / About -->
+    <!-- ══════════════════════════════════════════════
+         HERO
+    ══════════════════════════════════════════════ -->
     <section id="about" class="section hero-section">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">B2B SaaS • Fintech • Technology Content</p>
-          <h1 class="portfolio-title">B2B Technology Writer for SaaS &amp; Fintech Brands</h1>
+
+          <!-- CHANGED: richer eyebrow with accent line -->
+          <p class="hero-eyebrow-line">B2B SaaS &amp; Fintech Content Writer · Published at VIDIZMO, CapCut, Soul of Saudi, and TecStik Blogs</p>
+
+          <!-- CHANGED: headline focuses on outcome, not job title -->
+          <h1 class="portfolio-title">Winning Buyers of complex SaaS and Fintech with Authentic Thought-Leadership...</h1>
+
+          <!-- CHANGED: subheadline now names TecStik blog and active publishing -->
           <p class="portfolio-subtitle">
-            I help SaaS, fintech, and technology companies transform deep-tech ideas into clear, compelling, search-ready words that build trust, educate buyers, and support prospect generation.
+            I write SEO blogs, whitepapers, and thought leadership for SaaS, fintech, and technology companies — content that educates buyers and supports pipeline. I publish regularly on B2B content strategy and South Asian fintech at TecStik's technology blog, read by founders, investors, and marketing leads.
           </p>
+
           <div class="hero-badges">
             <span class="badge"><i class="fa-solid fa-magnifying-glass-chart"></i> SEO content</span>
             <span class="badge"><i class="fa-solid fa-layer-group"></i> Product-led articles</span>
             <span class="badge"><i class="fa-solid fa-file-lines"></i> Whitepapers &amp; long-form</span>
             <span class="badge"><i class="fa-solid fa-pen-nib"></i> Thought leadership</span>
           </div>
+
           <div class="button-row">
             <a href="#featured" class="portfolio-button button-primary">
-              View Featured Work <i class="fa-solid fa-arrow-down"></i>
+              Best Work <i class="fa-solid fa-arrow-down"></i>
             </a>
             <a href="#social" class="portfolio-button button-secondary">
-              Request Content Ideas <i class="fa-solid fa-arrow-right"></i>
+              Looking for Content Ideas? <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
+
+          <!-- CHANGED: stat 3 now signals active blog publication instead of just "SEO" -->
           <div class="proof-bar">
             <div class="proof-item">
               <strong>10+</strong>
               <span>years of writing for digital and technology brands</span>
             </div>
             <div class="proof-item">
-              <strong>B2B</strong>
-              <span>SaaS, fintech, video technology, and product content</span>
+              <strong>4</strong>
+              <span>Client publications — VIDIZMO, CapCut, Soul of Saudi, TecStik</span>
             </div>
             <div class="proof-item">
-              <strong>SEO</strong>
-              <span>blogs, website copy, product explainers, and whitepapers</span>
+              <strong>Active</strong>
+              <span>regular contributor at TecStik Technology Blog</span>
             </div>
           </div>
+
+          <!-- NEW: trust / client bar -->
+        
+
         </div>
         <div class="avatar-card">
-          <img class="avatar" src="./oz.png" alt="Azfar Bilal" />
+          <img class="avatar" src="./oz.png" alt="Azfar Saleem — B2B content writer" />
         </div>
       </div>
     </section>
 
-    <!-- Best Fit -->
+    <!-- ══════════════════════════════════════════════
+         WHO I HELP
+    ══════════════════════════════════════════════ -->
     <section class="section">
       <div class="container">
         <div class="has-text-centered section-heading">
           <p class="eyebrow">Best Fit</p>
           <h2 class="section-title">Who I help</h2>
-          <p class="section-intro">I am best suited for teams that need complex products explained clearly, confidently, and commercially.</p>
+          <!-- CHANGED: copy now references TecStik blog for SaaS and fintech cards -->
+          <p class="section-intro">My material supports teams that need straightforward explanations delivered in effortless language to raise commercial authority.</p>
         </div>
         <div class="grid-4">
           <div class="portfolio-card best-fit-card">
             <i class="fa-solid fa-cloud"></i>
             <h3 class="card-title">SaaS companies</h3>
-            <p class="card-copy">SEO blogs, product-led content, software explainers, and thought leadership for B2B software brands.</p>
+            <p class="card-copy">Achieving thought leadership for B2B software brands with SEO blogs, product-led content, including software explainers. </p>
           </div>
           <div class="portfolio-card best-fit-card">
             <i class="fa-solid fa-building-columns"></i>
             <h3 class="card-title">Fintech firms</h3>
-            <p class="card-copy">Clear content around payments, digital finance, blockchain, DeFi, financial inclusion, and trust-building.</p>
-          </div>
+            <p class="card-copy">Clear content around payments, digital finance, blockchain, financial inclusion, and regulation. TecStik's growing body of published analysis spotlights my highlights of South-Asian and Pakistani Fintech.</p>
+          </div>  
           <div class="portfolio-card best-fit-card">
             <i class="fa-solid fa-microchip"></i>
-            <h3 class="card-title">Technology companies</h3>
-            <p class="card-copy">Readable marketing content for technical platforms, enterprise tools, and complex digital products.</p>
+            <h3 class="card-title">Technology outfits</h3>
+            <p class="card-copy">Effortless readability surrounds my informative marketing content for technical platforms, enterprise tools, and complex digital products. I deliver audience-level clarity when presenting feature-level complexity.</p>
           </div>
           <div class="portfolio-card best-fit-card">
             <i class="fa-solid fa-bullseye"></i>
             <h3 class="card-title">Founders &amp; content leads</h3>
-            <p class="card-copy">Reliable long-form content, editorial support, and idea-to-draft execution without excessive hand-holding.</p>
+            <p class="card-copy">Break free from constant correspondence. You can rely on my editorial prowess and concept-to-draft execution easily. Brief me well and I'll generate leads by moving prospects through the buyer's journey.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Featured Case Studies -->
+     <section id="upwork" class="section">
+      <div class="container">
+        <div class="has-text-centered section-heading">
+          <p class="eyebrow">Verified Track Record</p>
+          <h2 class="section-title">Work history on Upwork</h2>
+          <p class="section-intro">Every completed job closed with a 5-star rating. ID verified. Platform insights awarded by Upwork based on client feedback.</p>
+        </div>
+ 
+        <div class="upwork-stats-row">
+          <div class="upwork-stat">
+            <div class="upwork-stat-num"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+            <div class="upwork-stat-label">5.0 average rating across all jobs</div>
+          </div>
+          <div class="upwork-stat">
+            <div class="upwork-stat-num">3</div>
+            <div class="upwork-stat-label">Completed contracts&#8202;&#8212;&#8202;all closed successfully</div>
+          </div>
+          <div class="upwork-stat">
+            <div class="upwork-stat-num">&#10003;</div>
+            <div class="upwork-stat-label">ID verified by Upwork</div>
+          </div>
+          <div class="upwork-stat">
+            <div class="upwork-stat-num">0&#8211;4h</div>
+            <div class="upwork-stat-label">Average response time</div>
+          </div>
+        </div>
+ 
+        <div class="upwork-jobs">
+ 
+          <!-- Job 1: Writing How-To Posts — has quote -->
+          <div class="upwork-job">
+            <div class="upwork-job-top">
+              <div class="upwork-job-title">Writing How-To Posts for Tech Website</div>
+              <span class="upwork-amount"><i class="fa-solid fa-circle-check"></i> Completed</span>
+            </div>
+            <div class="upwork-job-meta">
+              <span class="upwork-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="upwork-score">5.0</span>
+              <span class="upwork-date"><i class="fa-regular fa-calendar"></i> Oct 31 &#8211; Nov 5, 2021</span>
+              <span class="upwork-date"><i class="fa-solid fa-tag"></i> Fixed price</span>
+            </div>
+            <div class="upwork-review">
+              <blockquote>&#8220;Azfar is a good communicator, an excellent writer, and works hard. Recommended.&#8221;</blockquote>
+            </div>
+            <div class="upwork-insight-tags">
+              <span class="upwork-insight"><i class="fa-solid fa-comment-dots"></i> Clear Communicator</span>
+              <span class="upwork-insight"><i class="fa-solid fa-medal"></i> Committed to Quality</span>
+            </div>
+            <div class="upwork-skills">
+              <span class="upwork-skill">Blog Writing</span>
+              <span class="upwork-skill">SEO Writing</span>
+              <span class="upwork-skill">Tech Content</span>
+            </div>
+          </div>
+ 
+          <!-- Job 2: Content Manager -->
+          <div class="upwork-job">
+            <div class="upwork-job-top">
+              <div class="upwork-job-title">Content Manager &#8212; AI-Assisted Writing, Fact-Checking &amp; Video Editing</div>
+              <span class="upwork-amount"><i class="fa-solid fa-circle-check"></i> Completed</span>
+            </div>
+            <div class="upwork-job-meta">
+              <span class="upwork-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="upwork-score">5.0</span>
+              <span class="upwork-date"><i class="fa-regular fa-calendar"></i> Aug 24 &#8211; Aug 31, 2025</span>
+              <span class="upwork-date"><i class="fa-solid fa-tag"></i> Fixed price</span>
+            </div>
+            <p class="upwork-no-review">5-star rating awarded &#8212; no written review left by client.</p>
+            <div class="upwork-skills">
+              <span class="upwork-skill">Content Management</span>
+              <span class="upwork-skill">AI-Assisted Writing</span>
+              <span class="upwork-skill">Fact-Checking</span>
+              <span class="upwork-skill">Video Editing</span>
+            </div>
+          </div>
+ 
+          <!-- Job 3: SEO Content Writer -->
+          <div class="upwork-job">
+            <div class="upwork-job-top">
+              <div class="upwork-job-title">Long-Term English SEO Content Writer</div>
+              <span class="upwork-amount"><i class="fa-solid fa-circle-check"></i> Completed</span>
+            </div>
+            <div class="upwork-job-meta">
+              <span class="upwork-date"><i class="fa-regular fa-calendar"></i> Nov 25, 2023 &#8211; Mar 1, 2024</span>
+              <span class="upwork-date"><i class="fa-solid fa-tag"></i> Fixed price</span>
+            </div>
+            <p class="upwork-no-review">Long-term engagement (3+ months) &#8212; no public review left by client.</p>
+            <div class="upwork-skills">
+              <span class="upwork-skill">SEO Writing</span>
+              <span class="upwork-skill">Long-form Content</span>
+              <span class="upwork-skill">English Copywriting</span>
+            </div>
+          </div>
+ 
+        </div>
+ 
+        <div style="margin-top:1.5rem;text-align:center;">
+          <a href="https://www.upwork.com/freelancers/~019ff19a38f6ad8037?mp_source=share"
+             target="_blank" rel="noopener"
+             class="portfolio-button button-secondary"
+             style="display:inline-flex;gap:8px;align-items:center;font-size:0.875rem;padding:0.7rem 1.2rem;">
+            <i class="fa-brands fa-upwork" style="color:#14a800;"></i>
+            View full Upwork profile
+          </a>
+        </div>
+ 
+      </div>
+    </section>
+    <!-- ══════════════════════════════════════════════
+         FEATURED CASE STUDIES
+    ══════════════════════════════════════════════ -->
     <section id="featured" class="section">
       <div class="container">
         <div class="has-text-centered section-heading">
           <p class="eyebrow">Featured Case Studies</p>
           <h2 class="section-title">Selected proof for SaaS, fintech, and technology buyers</h2>
-          <p class="section-intro">Discover the selected project's audience, role, and business value by reading material below the images provided.</p>
+          <!-- CHANGED: intro now frames both client work and TecStik blog articles as case studies -->
+          <p class="section-intro">Client work and published writing as case studies — what I wrote, why, for whom, and what it was designed to do.</p>
         </div>
         <div class="grid-3">
+
+          <!-- VIDIZMO — CHANGED: business value sharpened with word count and deliverable type -->
           <article class="case-card">
             <a href="./VIDIZMOWhitepaper.pdf" target="_blank" rel="noopener">
               <div class="case-image"><img src="assets/img/white.png" alt="VIDIZMO whitepaper" /></div>
@@ -734,31 +1457,37 @@
             <div class="case-content">
               <p class="case-label">Enterprise SaaS • Whitepaper</p>
               <h3>VIDIZMO: Learning &amp; Development Whitepaper</h3>
-              <p class="card-copy">Long-form educational content for an enterprise video content management platform serving learning and development professionals.</p>
+              <p class="card-copy">Long-form educational content for an enterprise video content management platform serving L&amp;D professionals in large organisations.</p>
               <div class="case-list">
                 <p><strong>Goal:</strong> Explain how video streaming supports employee training and organisational learning.</p>
                 <p><strong>Audience:</strong> L&amp;D managers, enterprise teams, and decision-makers evaluating video platforms.</p>
-                <p><strong>My role:</strong> Research, structure, long-form writing, and content framing.</p>
-                <p><strong>Business value:</strong> Turned platform functionality into educational, authority-building content.</p>
+                <p><strong>My role:</strong> Research, structure, long-form writing, and content framing from blank brief to finished document.</p>
+                <p><strong>Business value:</strong> Turned platform functionality into a 2,400+ word authority asset used in VIDIZMO's L&amp;D buyer funnel — from blank brief to design-ready deliverable.</p>
               </div>
+              <span class="result-badge green"><i class="fa-solid fa-circle-check"></i> Published · Design-ready deliverable</span>
             </div>
           </article>
+
+          <!-- TECSTIK FINTECH — CHANGED: upgraded to analytical authority signal with sources named -->
           <article class="case-card">
-            <a href="https://tecstik.com/TecStik-Blog/Revealing-Pakistan's-Financial-Structure" target="_blank" rel="noopener">
-              <div class="case-image"><img src="assets/img/rev.png" alt="Pakistan financial structure article" /></div>
+            <a href="https://tecstik.com/TecStik-Blog/Revealing-Pakistan%27s-Financial-Structure" target="_blank" rel="noopener">
+              <div class="case-image"><img src="assets/img/rev.png" alt="Pakistan fintech scaling article" /></div>
             </a>
             <div class="case-content">
               <p class="case-label">Fintech • Thought Leadership</p>
-              <h3>TecStik: Pakistan's Financial Structure</h3>
-              <p class="card-copy">A fintech authority article built to explain Pakistan's financial ecosystem to readers interested in finance, regulation, and market structure.</p>
+              <h3>Why Pakistan's Fintech Startups Struggle to Scale</h3>
+              <p class="card-copy">Research-led analysis of the structural barriers preventing Pakistan's fintech sector from scaling — covering regulation, the funding gap, consumer trust, and what's working.</p>
               <div class="case-list">
-                <p><strong>Goal:</strong> Build subject-matter authority for TecStik's fintech blog.</p>
-                <p><strong>Audience:</strong> Pakistani finance readers, founders, investors, and fintech-curious professionals.</p>
-                <p><strong>My role:</strong> Research, writing, source-based explanation, and blog positioning.</p>
-                <p><strong>Business value:</strong> Helped frame TecStik as a fintech voice with educational depth.</p>
+                <p><strong>Sources:</strong> SBP data, Karandaaz reports, World Bank Findex, Crunchbase.</p>
+                <p><strong>Audience:</strong> Fintech founders, investors, and operators in Pakistan and the South Asian diaspora.</p>
+                <p><strong>My role:</strong> Sole author — research, analysis, and full draft.</p>
+                <p><strong>Business value:</strong> Demonstrates credible, data-referenced fintech analysis for a specialist audience — rare among freelance writers and priced accordingly.</p>
               </div>
+              <span class="result-badge teal"><i class="fa-solid fa-circle-check"></i> Published · TecStik Blog</span>
             </div>
           </article>
+
+          <!-- CAPCUT — CHANGED: business value now names the live publication and search intent angle -->
           <article class="case-card">
             <a href="https://www.capcut.com/resource/edit-blury-photos" target="_blank" rel="noopener">
               <div class="case-image"><img src="./screen.png" alt="CapCut image upscaler article" /></div>
@@ -766,69 +1495,116 @@
             <div class="case-content">
               <p class="case-label">Product-led SEO • Image Technology</p>
               <h3>CapCut: Image Upscaler SEO Blog</h3>
-              <p class="card-copy">A search-led how-to article comparing CapCut's image upscaler with other online image editing tools.</p>
+              <p class="card-copy">A search-led how-to article on CapCut's official resource blog — structured around high-intent queries to connect discovery with product trial.</p>
               <div class="case-list">
                 <p><strong>Goal:</strong> Convert product functionality into an educational SEO article.</p>
                 <p><strong>Audience:</strong> Creators, marketers, and users looking for fast image enhancement tools.</p>
                 <p><strong>My role:</strong> Keyword-led structure, writing, comparison framing, and product explanation.</p>
-                <p><strong>Business value:</strong> Helped connect search intent with product awareness and conversion potential.</p>
+                <p><strong>Business value:</strong> Live on CapCut's official resource blog — one of the world's most-downloaded creative apps. Demonstrates product-led SEO that doesn't read like a sales page.</p>
               </div>
+              <span class="result-badge amber"><i class="fa-solid fa-circle-check"></i> Live · Published on capcut.com</span>
             </div>
           </article>
+
+        </div>
+
+    <!-- ══════════════════════════════════════════════
+         REGULAR WRITING — NEW SECTION
+    ══════════════════════════════════════════════ -->
+    <!-- <section id="blog" class="section">
+      <div class="container">
+        <div class="has-text-centered section-heading">
+          <p class="eyebrow">Regular Writing</p>
+          <h2 class="section-title">TecStik Technology Blog</h2>
+          <p class="section-intro">I publish regularly on B2B content strategy and South Asian fintech — an ongoing demonstration that I produce high-quality, independently researched content on a consistent schedule. Update this list every time a new article goes live.</p>
+        </div>
+        <div class="blog-list">
+          <div class="blog-item">
+            <span class="blog-tag strategy">B2B Content Strategy</span>
+            <div>
+              <div class="blog-title">What Every SaaS Company Gets Wrong About Their Blog</div>
+              <div class="blog-meta">May 2026 · ~9 min read ·
+                <a href="https://tecstik.com/TecStik-Blog" target="_blank" rel="noopener">tecstik.com/TecStik-Blog</a>
+              </div>
+            </div>
+          </div>
+          <div class="blog-item">
+            <span class="blog-tag fintech">Pakistan Fintech</span>
+            <div>
+              <div class="blog-title">Why Pakistan's Fintech Startups Struggle to Scale</div>
+              <div class="blog-meta">May 2026 · ~8 min read ·
+                <a href="https://tecstik.com/TecStik-Blog" target="_blank" rel="noopener">tecstik.com/TecStik-Blog</a>
+              </div>
+            </div>
+          </div>
+          <div class="blog-item">
+            <span class="blog-tag fintech">Pakistan Fintech</span>
+            <div>
+              <div class="blog-title">Revealing Pakistan's Financial Structure</div>
+              <div class="blog-meta">2024 ·
+                <a href="https://tecstik.com/TecStik-Blog/Revealing-Pakistan%27s-Financial-Structure" target="_blank" rel="noopener">tecstik.com/TecStik-Blog</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <!-- Services -->
+    <!-- ══════════════════════════════════════════════
+         SERVICES
+    ══════════════════════════════════════════════ -->
     <section id="services" class="section">
       <div class="container">
         <div class="has-text-centered section-heading">
           <p class="eyebrow">Services</p>
           <h2 class="section-title">What you can hire me for</h2>
-          <p class="section-intro">I help B2B teams move from rough product ideas to clear, publishable content assets.</p>
+          <!-- CHANGED: intro now points to blog as live proof of practice -->
+          <p class="section-intro">Everything I offer, I also practise. My content strategy writing is published at TecStik's blog — evaluate the work before we speak.</p>
         </div>
         <div class="grid-3">
           <div class="service-card">
             <i class="fa-solid fa-chart-line"></i>
             <h3 class="card-title">SEO Blog Writing</h3>
-            <p class="card-copy">Search-led long-form articles for SaaS, fintech, and technology brands that need discoverability and clarity.</p>
+            <p class="card-copy">Search-led long-form articles for SaaS, fintech, and technology brands that need discoverability, topical authority, and buyer clarity.</p>
           </div>
           <div class="service-card">
             <i class="fa-solid fa-lightbulb"></i>
             <h3 class="card-title">Thought Leadership Content</h3>
-            <p class="card-copy">Founder-led articles, industry explainers, LinkedIn post ideas, and POV pieces that communicate authority.</p>
+            <p class="card-copy">Founder-led articles, industry explainers, LinkedIn posts, and POV pieces that communicate authority and build an audience over time.</p>
           </div>
           <div class="service-card">
             <i class="fa-solid fa-file-circle-check"></i>
             <h3 class="card-title">Whitepapers &amp; Lead Magnets</h3>
-            <p class="card-copy">Research-driven long-form assets that help educate buyers, support lead generation, and deepen trust.</p>
+            <p class="card-copy">Research-driven long-form assets that educate buyers, support lead generation, and build the kind of trust that shortens sales cycles.</p>
           </div>
           <div class="service-card">
             <i class="fa-solid fa-window-maximize"></i>
             <h3 class="card-title">Website &amp; Product Copy</h3>
-            <p class="card-copy">Homepage sections, service pages, landing pages, and product explainers for complex technical offerings.</p>
+            <p class="card-copy">Homepage sections, service pages, landing pages, and product explainers for complex technical offerings where clarity is the differentiator.</p>
           </div>
           <div class="service-card">
             <i class="fa-solid fa-map"></i>
             <h3 class="card-title">Content Strategy Support</h3>
-            <p class="card-copy">Keyword mapping, article briefs, content calendars, topic clusters, and editorial planning support.</p>
+            <p class="card-copy">Keyword mapping, topic clusters, article briefs, content calendars, and editorial planning for B2B SaaS and fintech teams.</p>
           </div>
           <div class="service-card">
             <i class="fa-solid fa-envelope-open-text"></i>
             <h3 class="card-title">Email &amp; Sales Enablement</h3>
-            <p class="card-copy">Nurture emails, outreach copy, sales-support assets, and repurposed content for buyer education.</p>
+            <p class="card-copy">Nurture emails, outreach copy, sales-support assets, and repurposed content for buyer education at every funnel stage.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Selected Work -->
+    <!-- ══════════════════════════════════════════════
+         SELECTED WORK — essays section REMOVED
+    ══════════════════════════════════════════════ -->
     <section id="projects" class="section">
       <div class="container">
         <div class="has-text-centered section-heading">
           <p class="eyebrow">Selected Work</p>
           <h2 class="section-title">Additional writing samples by category</h2>
-          <p class="section-intro">Find my work across SaaS, video technology, fintech, travel, and research-led essays.</p>
+          <p class="section-intro">Work across SaaS, video technology, fintech, and travel — demonstrating range across formats, industries, and client types.</p>
         </div>
 
         <div class="samples-wrapper">
@@ -897,7 +1673,7 @@
               <p>Blog content explaining how fintech can broaden access to financial services and support digital finance adoption.</p>
             </article>
             <article class="sample-card">
-              <a href="https://tecstik.com/TecStik-Blog/Revealing-Pakistan's-Financial-Structure" target="_blank" rel="noopener">
+              <a href="https://tecstik.com/TecStik-Blog/Revealing-Pakistan%27s-Financial-Structure" target="_blank" rel="noopener">
                 <figure><img src="assets/img/rev.png" alt="Pakistan financial structure" /></figure>
               </a>
               <span class="tag">Authority article</span>
@@ -929,124 +1705,78 @@
           </div>
         </div>
 
-        <div class="samples-wrapper">
-          <h3 class="category-heading" id="ant">Selected Essays &amp; Research Writing</h3>
-          <p class="section-intro" style="margin-left:0;margin-bottom:1rem;">
-            These essays showcase my ability to handle research-heavy ideas, cultural analysis, theory, and detailed arguments.
-          </p>
-          <div class="grid-3">
-            <article class="sample-card">
-              <a href="https://azfarsaleem.medium.com/how-the-media-misrepresents-gendered-violence-58cd687deadb" target="_blank" rel="noopener">
-                <figure><img src="assets/img/how.png" alt="Gendered violence and media" /></figure>
-              </a>
-              <span class="tag">Media analysis</span>
-              <h4>How the Media Misrepresents Gendered Violence</h4>
-              <p>Research-led essay exploring how media narratives can underplay the intensity and structure of gendered violence.</p>
-            </article>
-            <article class="sample-card">
-              <a href="https://azfarsaleem.medium.com/how-new-media-technologies-are-shaping-transnational-activism-and-political-protest-in-recent-years-adc2108f1cc9" target="_blank" rel="noopener">
-                <figure><img src="assets/img/trans.png" alt="Transnational activism" /></figure>
-              </a>
-              <span class="tag">Technology &amp; society</span>
-              <h4>New Media Technologies &amp; Transnational Activism</h4>
-              <p>Essay on the role of digital media in protest, activism, and cross-border political mobilisation.</p>
-            </article>
-            <article class="sample-card">
-              <a href="https://azfarsaleem.medium.com/spike-lees-powerful-intimation-of-racial-discrimination-do-the-right-thing-b45aeaa89ac3" target="_blank" rel="noopener">
-                <figure><img src="assets/img/the.png" alt="Do the Right Thing analysis" /></figure>
-              </a>
-              <span class="tag">Film criticism</span>
-              <h4>Spike Lee's Do the Right Thing</h4>
-              <p>Critical essay exploring race, marginalisation, and social conflict through film analysis.</p>
-            </article>
-            <article class="sample-card">
-              <a href="https://azfarsaleem.medium.com/thematically-focusing-on-issues-of-race-in-cinema-ea8c4fb0c520" target="_blank" rel="noopener">
-                <figure><img src="assets/img/mal.png" alt="Malcolm X and race in cinema" /></figure>
-              </a>
-              <span class="tag">Cinema essay</span>
-              <h4>Race in Cinema: Malcolm X</h4>
-              <p>Long-form analysis of race, representation, and biographical storytelling in cinema.</p>
-            </article>
-            <article class="sample-card">
-              <a href="https://azfarsaleem.medium.com/discussing-michel-foucaults-concept-of-power-in-relation-to-race-b7d09f33cad5" target="_blank" rel="noopener">
-                <figure><img src="assets/img/mic.png" alt="Michel Foucault and power" /></figure>
-              </a>
-              <span class="tag">Theory essay</span>
-              <h4>Foucault's Concept of Power in Relation to Race</h4>
-              <p>Research-heavy theoretical essay applying Foucault's ideas of power, discourse, and biopolitics to race.</p>
-            </article>
-          </div>
-        </div>
+        <!-- NOTE: Research Essays section removed — academic essays weaken B2B niche signal.
+             If you want to keep them accessible, link your Medium profile from the About section only.
+             To restore, add a new .samples-wrapper block here with id="ant". -->
+
       </div>
     </section>
 
-    <!-- Qualifications -->
+    <!-- ══════════════════════════════════════════════
+         QUALIFICATIONS — reordered: HubSpot Content first, Alan Sharpe second
+    ══════════════════════════════════════════════ -->
     <section class="section">
       <div class="container">
         <div class="has-text-centered section-heading">
           <h2 class="section-title" id="quals">Certifications &amp; tools</h2>
-          <p class="section-intro">I have leveraged industry-leading resources as training across content marketing, inbound marketing, B2B writing, affiliate marketing, WordPress, responsive design, and problem-solving.</p>
+          <p class="section-intro">Industry-leading training across content marketing, B2B writing, inbound methodology, and web fundamentals.</p>
         </div>
-       <div class="grid-4">
-  <article class="qualification-card">
-    <a href="https://www.credly.com/badges/8e0dbee3-7229-4bab-a833-94ce04a96025" target="_blank" rel="noopener">
-      <figure><img src="assets/img/mckinsey.png" alt="McKinsey Forward Program" /></figure>
-    </a>
-    <h4>McKinsey Academy — Forward Program</h4>
-    <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">Certified Problem Strategist adept at analytical thinking and professional skills.</p>
-  </article>
-  <article class="qualification-card">
-    <a href="https://app.hubspot.com/academy/achievements/nv38c1fy/en/1/azfar-saleem/content-marketing" target="_blank" rel="noopener">
-      <figure><img src="assets/img/Hubspot.png" alt="HubSpot Content Marketing" id="coms" /></figure>
-    </a>
-    <h4>HubSpot Academy — Certified Content Marketer</h4>
-    <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">Covers topic clusters, pillar pages, content gap analysis, buyer journeys, and performance measurement for B2B SaaS teams.</p>
-  </article>
-  <article class="qualification-card">
-    <a href="https://app.hubspot.com/academy/achievements/69870hcw/en/1/azfar-saleem/inbound-marketing" target="_blank" rel="noopener">
-      <figure><img src="assets/img/HubspotInboundMarketingCertificate.png" alt="HubSpot Inbound Marketing" id="inbound" /></figure>
-    </a>
-    <h4>HubSpot Academy — Inbound Marketing Certified</h4>
-    <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">Inbound methodology, lead nurturing, and content-driven funnel thinking — the standard framework across B2B SaaS marketing teams.</p>
-  </article>
-  <article class="qualification-card">
-    <a href="./B2B Content Writing Certification Alan Sharpe.pdf" target="_blank" rel="noopener">
-      <figure><img src="./alan.png" alt="Alan Sharpe B2B Content Writing Masterclass" id="alan" /></figure>
-    </a>
-    <h4>Alan Sharpe — B2B Content Writing Masterclass + ChatGPT Tips</h4>
-    <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">Specialist B2B copywriting training from a respected educator in the field — directly applicable to SaaS, fintech, and technology content.</p>
-  </article>
-  <article class="qualification-card">
-    <a href="https://www.freecodecamp.org/certification/AzfarSaleem/responsive-web-design" target="_blank" rel="noopener">
-      <figure><img src="assets/img/fcc.png" alt="FreeCodeCamp Responsive Web Design" id="res" /></figure>
-    </a>
-    <h4>Web Fundamentals — How Content Lives on the Page</h4>
-    <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">FreeCodeCamp Responsive Web Design. A content writer who understands HTML structure, CMS formatting, and screen-optimised layout is more useful than one who does not.</p>
-  </article>
-  <article class="qualification-card">
-    <a href="./WordpressCertificateDigiskills.pdf" target="_blank" rel="noopener">
-      <figure><img src="assets/img/word.png" alt="Digiskills WordPress" id="word" /></figure>
-    </a>
-    <h4>WordPress — Content Publishing &amp; CMS Management</h4>
-    <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">Digiskills certified. Able to publish directly into WordPress, format correctly for the web, and work within client CMS environments without hand-holding.</p>
-  </article>
-  <!-- <article class="qualification-card">
-    <a href="assets/img/CrossoverCognitiveAptitudeTest.png" target="_blank" rel="noopener">
-      <figure><img src="assets/img/CrossoverCognitiveAptitudeTest.png" alt="Crossover Cognitive Aptitude Test" id="cross" /></figure>
-    </a>
-    <h4>Crossover — Cognitive Aptitude Test: Verified Top Tier Writer</h4>
-  </article>
-  <article class="qualification-card">
-    <a href="./aff.pdf" target="_blank" rel="noopener">
-      <figure><img src="assets/img/aff.png" alt="Digiskills Affiliate Marketing" id="afm" /></figure>
-    </a>
-    <h4>Digiskills — Affiliate Marketing</h4>
-  </article> -->
-</div>
+        <div class="grid-4">
+          <!-- 1. HubSpot Content — most relevant, leads -->
+          <article class="qualification-card">
+            <a href="https://app.hubspot.com/academy/achievements/nv38c1fy/en/1/azfar-saleem/content-marketing" target="_blank" rel="noopener">
+              <figure><img src="assets/img/Hubspot.png" alt="HubSpot Content Marketing" id="coms" /></figure>
+            </a>
+            <h4>HubSpot Academy — Certified Content Marketer</h4>
+            <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">Topic clusters, pillar pages, content gap analysis, buyer journeys, and performance measurement for B2B SaaS teams.</p>
+          </article>
+          <!-- 2. Alan Sharpe — second most relevant -->
+          <article class="qualification-card">
+            <a href="./B2B Content Writing Certification Alan Sharpe.pdf" target="_blank" rel="noopener">
+              <figure><img src="./alan.png" alt="Alan Sharpe B2B Content Writing Masterclass" id="alan" /></figure>
+            </a>
+            <h4>Alan Sharpe — B2B Content Writing Masterclass</h4>
+            <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">Specialist B2B copywriting training directly applicable to SaaS, fintech, and technology content.</p>
+          </article>
+          <!-- 3. HubSpot Inbound -->
+          <article class="qualification-card">
+            <a href="https://app.hubspot.com/academy/achievements/69870hcw/en/1/azfar-saleem/inbound-marketing" target="_blank" rel="noopener">
+              <figure><img src="assets/img/HubspotInboundMarketingCertificate.png" alt="HubSpot Inbound Marketing" id="inbound" /></figure>
+            </a>
+            <h4>HubSpot Academy — Inbound Marketing Certified</h4>
+            <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">Inbound methodology, lead nurturing, and content-driven funnel thinking — the standard framework across B2B SaaS marketing teams.</p>
+          </article>
+          <!-- 4. McKinsey -->
+          <article class="qualification-card">
+            <a href="https://www.credly.com/badges/8e0dbee3-7229-4bab-a833-94ce04a96025" target="_blank" rel="noopener">
+              <figure><img src="assets/img/mckinsey.png" alt="McKinsey Forward Program" /></figure>
+            </a>
+            <h4>McKinsey Academy — Forward Program</h4>
+            <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">Certified Problem Strategist — analytical thinking and professional skills development.</p>
+          </article>
+          <!-- 5. WordPress -->
+          <article class="qualification-card">
+            <a href="./WordpressCertificateDigiskills.pdf" target="_blank" rel="noopener">
+              <figure><img src="assets/img/word.png" alt="Digiskills WordPress" id="word" /></figure>
+            </a>
+            <h4>WordPress — Content Publishing &amp; CMS Management</h4>
+            <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">Able to publish directly into WordPress, format correctly for the web, and work within client CMS environments without hand-holding.</p>
+          </article>
+          <!-- 6. FreeCodeCamp -->
+          <article class="qualification-card">
+            <a href="https://www.freecodecamp.org/certification/AzfarSaleem/responsive-web-design" target="_blank" rel="noopener">
+              <figure><img src="assets/img/fcc.png" alt="FreeCodeCamp Responsive Web Design" id="res" /></figure>
+            </a>
+            <h4>Web Fundamentals — How Content Lives on the Page</h4>
+            <p style="color:var(--portfolio-muted);font-size:0.85rem;margin-top:0.4rem;">FreeCodeCamp Responsive Web Design. A content writer who understands HTML structure, CMS formatting, and screen-optimised layout is more useful than one who does not.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- Human About -->
+    <!-- ══════════════════════════════════════════════
+         ABOUT — new paragraph about active publishing added
+    ══════════════════════════════════════════════ -->
     <section class="section">
       <div class="container">
         <div class="about-panel">
@@ -1057,14 +1787,18 @@
             </div>
             <div>
               <p>I am a B2B content writer with an educational background in media and anthropology. My professional experience includes writing for SaaS, fintech, video technology, travel, and research-heavy topics.</p>
-             <br>
+              <br>
               <p>My strongest work sits where technical products need human explanation: product-led SEO blogs, educational articles, long-form assets, thought leadership, and website content that helps readers understand why a solution matters.</p>
-              <div class="hero-badges">
+              <br>
+              <!-- NEW paragraph -->
+              <p>I write and publish regularly at TecStik's technology blog — covering B2B content strategy and South Asian fintech — which means the expertise I bring to client projects is publicly visible and verifiable.</p>
+              <div class="hero-badges" style="margin-top:1rem;">
                 <span class="badge">SEO writing</span>
                 <span class="badge">Technical explainers</span>
                 <span class="badge">Fintech storytelling</span>
                 <span class="badge">Research-led content</span>
                 <span class="badge">WordPress &amp; web basics</span>
+                <span class="badge">Content strategy</span>
               </div>
             </div>
           </div>
@@ -1072,7 +1806,9 @@
       </div>
     </section>
 
-    <!-- Contact CTA / Social -->
+    <!-- ══════════════════════════════════════════════
+         CONTACT CTA
+    ══════════════════════════════════════════════ -->
     <section id="social" class="section cta-section">
       <div class="container cta-card">
         <p class="eyebrow">Work With Me</p>
@@ -1080,32 +1816,32 @@
         <p class="section-intro">Send me your product, target audience, and content goal. I will suggest 2–3 content ideas you can use to build trust, educate buyers, or improve search visibility.</p>
         <div class="button-row" style="justify-content:center;">
           <a href="mailto:azfarbil@gmail.com?subject=Content%20Project%20Inquiry&body=Hi%20Azfar%2C%0D%0A%0D%0AI%27m%20reaching%20out%20about%20a%20B2B%20content%20project.%0D%0A%0D%0AProduct%2Fcompany%3A%0D%0ATarget%20audience%3A%0D%0AContent%20goal%3A%0D%0A" class="portfolio-button button-primary">
-            Request Content Ideas <i class="fa-solid fa-envelope"></i>
+            Need Content Ideas? <i class="fa-solid fa-envelope"></i>
           </a>
           <a href="https://www.linkedin.com/in/azfarbilal-contentwriter/" target="_blank" rel="noopener" class="portfolio-button button-secondary">
-            Connect on LinkedIn <i class="fa-brands fa-linkedin"></i>
+            LinkedIn <i class="fa-brands fa-linkedin"></i>
           </a>
           <a href="https://wa.me/+923352070555" target="_blank" rel="noopener" class="portfolio-button button-secondary">
-            WhatsApp Me <i class="fa-brands fa-whatsapp"></i>
+            WhatsApp <i class="fa-brands fa-whatsapp"></i>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer — last updated date added -->
     <section class="section-4 has-text-centered container footer-contact">
       <p>
         Azfar Saleem • B2B SaaS &amp; Fintech Content Writer •
         <a href="mailto:azfarbil@gmail.com">azfarbil@gmail.com</a> •
         <a href="https://wa.me/+923352070555" target="_blank" rel="noopener">+923352070555</a>
       </p>
+      <p class="footer-updated">Last updated June 2026</p>
     </section>
 
-    <!-- Scripts -->
+    <!-- Scripts (unchanged) -->
     <script src="controller.js"></script>
 
     <script>
-      // ── Hamburger toggle ──
       const hamburger = document.getElementById('nav-hamburger');
       const navMenu   = document.getElementById('nav-menu');
 
@@ -1115,7 +1851,6 @@
         hamburger.setAttribute('aria-expanded', String(isOpen));
       });
 
-      // Close menu when any anchor nav-item is tapped
       navMenu.querySelectorAll('a.nav-item').forEach(link => {
         link.addEventListener('click', () => {
           navMenu.classList.remove('is-open');
@@ -1124,7 +1859,6 @@
         });
       });
 
-      // Mobile: tap dropbtn to toggle dropdown inline
       document.querySelectorAll('.dropdown .dropbtn').forEach(btn => {
         btn.addEventListener('click', (e) => {
           if (window.innerWidth <= 900) {
@@ -1134,14 +1868,13 @@
         });
       });
 
-      // Close dropdowns when tapping outside
       document.addEventListener('click', (e) => {
-  if (!e.target.closest('#main-nav')) {
-    navMenu.classList.remove('is-open');
-    hamburger.classList.remove('is-open');
-    hamburger.setAttribute('aria-expanded', 'false');
-  }
-});
+        if (!e.target.closest('#main-nav')) {
+          navMenu.classList.remove('is-open');
+          hamburger.classList.remove('is-open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      });
     </script>
   </body>
 </html>
